@@ -19,107 +19,68 @@
     ></script>
 
     <!-- The below is the favicon -->
-    <link rel="icon" type="image/png" href="src/Assets/favIcon.png" />
+    <link rel="icon" type="image/jpg" href="src/Assets/favIcon.jpg" />
 
     <!-- The below is the title -->
     <title>AGRIXPO</title>
   </head>
   <body>
-    <header class="bg-white">
+    <header class="bg-primary-light fixed w-full z-50 shadow-md">
       <nav
-        class="flex items-center justify-between md:w-[90%] w-[95%] m-auto px-[20px] py-[10px]"
+        class="flex items-center justify-between w-[95%] md:w-[90%] mx-auto px-[20px] py-[10px] relative"
       >
         <div>
           <a href="#" class="flex items-center gap-1">
-            <img src="src/Assets/logo.png" alt="logo" class="w-9" />
-            <span class="font-black text-xl">AGRIXPO</span>
+            <img src="src/Assets/logo.jpg" alt="logo" class="w-9" />
+            <span class="font-black text-xl"
+              >AGRI<span class="text-white">XPO</span></span
+            >
           </a>
         </div>
-        <div class="flex justify-between gap-x-[50px]">
+        <div class="flex justify-between items-center gap-x-[50px]">
           <div
-            class="nav-links bg-white md:static absolute md:min-h-fit min-h-[60vh] left-0 top-[-100%] w-full md:w-auto flex items-center justify-center"
+            class="nav-links bg-primary-light md:static fixed md:min-h-fit min-h-screen left-0 top-[-100%] w-full md:w-auto flex flex-col md:flex-row items-center md:justify-center md:p-[5px] justify-start p-[100px] md:gap-[2vw] gap-4 font-bold md:font-medium z-50 transition-all duration-300"
           >
             <ul
-              class="flex md:flex-row text-xl md:text-base flex-col md:items-center md:gap-[2vw] gap-[15px] font-bold md:font-medium"
+              class="flex md:flex-row text-xl md:text-base flex-col md:items-center md:gap-[2vw] gap-[15px] font-bold md:font-medium uppercase"
             >
               <li>
-                <a href="" class="md:font-semibold text-primary-dark"
+                <a
+                  href=""
+                  class="md:font-bold text-white transition-all duration-[0.3s]"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href=""
+                  class="md:font-bold text-black hover:text-white transition-all duration-[0.3s]"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="./src/Pages/products.html"
+                  class="md:font-bold text-black hover:text-white transition-all duration-[0.3s]"
                   >Products</a
                 >
               </li>
               <li>
                 <a
                   href=""
-                  class="hover:text-primary-dark transition-all duration-[0.3s]"
-                  >Categories</a
+                  class="md:font-bold text-black hover:text-white transition-all duration-[0.3s]"
+                  >Contact Us</a
                 >
               </li>
-              <li>
-                <a
-                  href=""
-                  class="hover:text-primary-dark transition-all duration-[0.3s]"
-                  >Order</a
-                >
-              </li>
-              <li>
-                <a
-                  href=""
-                  class="hover:text-primary-dark transition-all duration-[0.3s]"
-                  >Message</a
-                >
-              </li>
-              <li>
-                <a
-                  href=""
-                  class="hover:text-primary-dark transition-all duration-[0.3s]"
-                  >Help</a
-                >
-              </li>
-              <div class="flex items-center gap-[10px]">
-                <li>
-                  <a href=""
-                    ><ion-icon
-                      name="search-outline"
-                      class="md:w-10 bg-gray-200 md:p-[5px] p-[10px] w-[50px] rounded-sm md:mt-[8px] hover:text-primary-dark transition-all duration-[0.3s]"
-                    ></ion-icon
-                  ></a>
-                </li>
-                <li>
-                  <a href=""
-                    ><ion-icon
-                      name="cart-outline"
-                      class="md:w-10 bg-gray-200 md:p-[5px] p-[10px] w-[50px] rounded-sm md:mt-[8px] hover:text-primary-dark transition-all duration-[0.3s]"
-                    ></ion-icon>
-                  </a>
-                </li>
-              </div>
             </ul>
           </div>
-
           <div class="flex items-center gap-[10px]">
-            <ul>
-              <li
-                class="bg-primary-light border-2 border-solid border-primary-light px-[12px] py-[3px] rounded-sm hover:bg-white transition-all duration-[0.3s]"
-              >
-                <a
-                  href="./login.html"
-                  class="text-white hover:text-primary-light font-semibold"
-                  >Login</a
-                >
-              </li>
-            </ul>
-            <div
-              class="rounded-full border-2 border-solid border-primary-light shadow-sm shadow-gray-400 w-[45px] h-[45px] p-[6px]"
-            >
-              <img
-                src="src/Assets/Icons/profile.png"
-                alt="profile"
-                class="w-full h-full"
-              />
+            <div class="flex items-center justify-center">
+              <ion-icon class="text-xl" name="notifications"></ion-icon>
             </div>
             <ion-icon
               onclick="onToggleMenu(this)"
-              class="md:hidden cursor-pointer w-8 h-8 bg-gray-100 p-[5px] rounded-sm transition-all duration-[0.3s]"
+              class="md:hidden cursor-pointer w-8 h-8 bg-primary-light p-[5px] rounded-sm transition-all duration-300"
               name="menu-outline"
             ></ion-icon>
           </div>
@@ -128,7 +89,7 @@
     </header>
     <main>
       <section
-        class="relative bg-red-200 m-auto md:w-[87%] w-[90%] md:h-[70vh] h-[60vh] flex flex-col items-start md:justify-end justify-center py-[80px] px-[40px] overflow-hidden"
+        class="relative m-auto w-full h-[100vh] flex flex-col items-center justify-center overflow-hidden z-0"
       >
         <img
           src="src/Assets/Img/hero-section.jpg"
@@ -137,340 +98,42 @@
         />
         <div class="absolute inset-0 bg-black bg-opacity-50"></div>
         <div class="relative z-10 md:w-[50%] w-full">
-          <h1 class="text-white text-6xl font-extrabold my-2">
-            <span class="text-primary-light drop-shadow-[md]">AGRI</span>XPO
-          </h1>
-          <p class="text-2xl font-bold text-white my-2">
-            Discover Fresh Local Farm Products
-          </p>
-          <div
-            class="flex items-center bg-white py-1 px-2 rounded-md w-full shadow-md shadow-black-400"
+          <h1
+            class="text-white text-6xl font-extrabold my-2 text-center py-5"
+            style="text-shadow: 2px 1px 2px #ffa443"
           >
-            <ion-icon name="search-outline" class="md:w-10 w-[50px]"></ion-icon>
-            <input
-              type="text"
-              placeholder="Search for fruits, vegetables, and more"
-              class="w-[80%] focus:outline-none placeholder:text-primary-light md:placeholder:text-sm placeholder:text-[12px] placeholder:font-semibold text-sm font-semibold"
-            />
-            <button
-              class="bg-primary-light text-white px-[10px] py-[5px] rounded-md text-[14px] font-semibold"
-            >
-              Search
-            </button>
+            Agriculture Beyond Borders
+          </h1>
+          <p
+            class="text-2xl font-bold text-primary-light text-center capitalize mb-5"
+          >
+            Connecting local farmers to global consumers
+          </p>
+          <ul
+            class="flex items-center justify-center gap-10 text-[16px] font-normal italic mt-10"
+          >
+            <li>
+              <a href="" class="bg-primary-light py-[5px] px-5 rounded-sm"
+                >Join Us</a
+              >
+            </li>
+            <li>
+              <a
+                href=""
+                class="bg-white py-[5px] px-5 rounded-sm text-primary-dark"
+                >Learn More</a
+              >
+            </li>
+          </ul>
+          <div class="flex items-center justify-center mt-[60px]">
+            <ion-icon
+              class="text-white text-4xl font-bold"
+              name="chevron-down-outline"
+            ></ion-icon>
           </div>
         </div>
       </section>
-      <section class="m-auto md:w-[87%] w-[90%] py-[40px]">
-        <div class="flex items-center justify-center py-[10px] mb-5">
-          <h2 class="text-4xl font-bold">Our Products</h2>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-[15px] md:gap-[30px]">
-          <div class="bg-white shadow-md shadow-gray-300 rounded-md">
-            <img
-              src="src/Assets/Img/fruits.png"
-              alt="Product"
-              class="w-full h-[180px] object-cover rounded-t-md"
-            />
-            <div class="p-[10px]">
-              <h3 class="text-xl font-bold">Fresh Fruits</h3>
-              <p class="text-gray-500">
-                Fresh fruits from local farms. 100% organic and healthy.
-              </p>
-              <div class="flex items-center justify-between mt-[20px]">
-                <div class="flex items-start gap-[10px]">
-                  <div
-                    class="rounded-full bg-gray-100 w-[30px] h-[30px] p-[3px]"
-                  >
-                    <img
-                      src="src/Assets/Icons/profile.png"
-                      alt="profile"
-                      class="w-full h-full"
-                    />
-                  </div>
-                  <div>
-                    <h4 class="font-semibold text-sm">John Doe</h4>
-                    <p class="text-gray-500 text-[10px]">Farmer</p>
-                  </div>
-                </div>
 
-                <div class="flex items-start justify-center gap-[5px]">
-                  <ion-icon
-                    name="star"
-                    class="text-primary-light w-[16px] h-[16px]"
-                  ></ion-icon>
-                  <p class="text-primary-light font-semibold text-sm">4.5</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="bg-white shadow-md shadow-gray-300 rounded-md">
-            <img
-              src="src/Assets/Img/fruits.png"
-              alt="Product"
-              class="w-full h-[180px] object-cover rounded-t-md"
-            />
-            <div class="p-[10px]">
-              <h3 class="text-xl font-bold">Fresh Fruits</h3>
-              <p class="text-gray-500">
-                Fresh fruits from local farms. 100% organic and healthy.
-              </p>
-              <div class="flex items-center justify-between mt-[20px]">
-                <div class="flex items-start gap-[10px]">
-                  <div
-                    class="rounded-full bg-gray-100 w-[30px] h-[30px] p-[3px]"
-                  >
-                    <img
-                      src="src/Assets/Icons/profile.png"
-                      alt="profile"
-                      class="w-full h-full"
-                    />
-                  </div>
-                  <div>
-                    <h4 class="font-semibold text-sm">John Doe</h4>
-                    <p class="text-gray-500 text-[10px]">Farmer</p>
-                  </div>
-                </div>
-
-                <div class="flex items-start justify-center gap-[5px]">
-                  <ion-icon
-                    name="star"
-                    class="text-primary-light w-[16px] h-[16px]"
-                  ></ion-icon>
-                  <p class="text-primary-light font-semibold text-sm">4.5</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="bg-white shadow-md shadow-gray-300 rounded-md">
-            <img
-              src="src/Assets/Img/fruits.png"
-              alt="Product"
-              class="w-full h-[180px] object-cover rounded-t-md"
-            />
-            <div class="p-[10px]">
-              <h3 class="text-xl font-bold">Fresh Fruits</h3>
-              <p class="text-gray-500">
-                Fresh fruits from local farms. 100% organic and healthy.
-              </p>
-              <div class="flex items-center justify-between mt-[20px]">
-                <div class="flex items-start gap-[10px]">
-                  <div
-                    class="rounded-full bg-gray-100 w-[30px] h-[30px] p-[3px]"
-                  >
-                    <img
-                      src="src/Assets/Icons/profile.png"
-                      alt="profile"
-                      class="w-full h-full"
-                    />
-                  </div>
-                  <div>
-                    <h4 class="font-semibold text-sm">John Doe</h4>
-                    <p class="text-gray-500 text-[10px]">Farmer</p>
-                  </div>
-                </div>
-
-                <div class="flex items-start justify-center gap-[5px]">
-                  <ion-icon
-                    name="star"
-                    class="text-primary-light w-[16px] h-[16px]"
-                  ></ion-icon>
-                  <p class="text-primary-light font-semibold text-sm">4.5</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="bg-white shadow-md shadow-gray-300 rounded-md">
-            <img
-              src="src/Assets/Img/fruits.png"
-              alt="Product"
-              class="w-full h-[180px] object-cover rounded-t-md"
-            />
-            <div class="p-[10px]">
-              <h3 class="text-xl font-bold">Fresh Fruits</h3>
-              <p class="text-gray-500">
-                Fresh fruits from local farms. 100% organic and healthy.
-              </p>
-              <div class="flex items-center justify-between mt-[20px]">
-                <div class="flex items-start gap-[10px]">
-                  <div
-                    class="rounded-full bg-gray-100 w-[30px] h-[30px] p-[3px]"
-                  >
-                    <img
-                      src="src/Assets/Icons/profile.png"
-                      alt="profile"
-                      class="w-full h-full"
-                    />
-                  </div>
-                  <div>
-                    <h4 class="font-semibold text-sm">John Doe</h4>
-                    <p class="text-gray-500 text-[10px]">Farmer</p>
-                  </div>
-                </div>
-
-                <div class="flex items-start justify-center gap-[5px]">
-                  <ion-icon
-                    name="star"
-                    class="text-primary-light w-[16px] h-[16px]"
-                  ></ion-icon>
-                  <p class="text-primary-light font-semibold text-sm">4.5</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="bg-white shadow-md shadow-gray-300 rounded-md">
-            <img
-              src="src/Assets/Img/fruits.png"
-              alt="Product"
-              class="w-full h-[180px] object-cover rounded-t-md"
-            />
-            <div class="p-[10px]">
-              <h3 class="text-xl font-bold">Fresh Fruits</h3>
-              <p class="text-gray-500">
-                Fresh fruits from local farms. 100% organic and healthy.
-              </p>
-              <div class="flex items-center justify-between mt-[20px]">
-                <div class="flex items-start gap-[10px]">
-                  <div
-                    class="rounded-full bg-gray-100 w-[30px] h-[30px] p-[3px]"
-                  >
-                    <img
-                      src="src/Assets/Icons/profile.png"
-                      alt="profile"
-                      class="w-full h-full"
-                    />
-                  </div>
-                  <div>
-                    <h4 class="font-semibold text-sm">John Doe</h4>
-                    <p class="text-gray-500 text-[10px]">Farmer</p>
-                  </div>
-                </div>
-
-                <div class="flex items-start justify-center gap-[5px]">
-                  <ion-icon
-                    name="star"
-                    class="text-primary-light w-[16px] h-[16px]"
-                  ></ion-icon>
-                  <p class="text-primary-light font-semibold text-sm">4.5</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="bg-white shadow-md shadow-gray-300 rounded-md">
-            <img
-              src="src/Assets/Img/fruits.png"
-              alt="Product"
-              class="w-full h-[180px] object-cover rounded-t-md"
-            />
-            <div class="p-[10px]">
-              <h3 class="text-xl font-bold">Fresh Fruits</h3>
-              <p class="text-gray-500">
-                Fresh fruits from local farms. 100% organic and healthy.
-              </p>
-              <div class="flex items-center justify-between mt-[20px]">
-                <div class="flex items-start gap-[10px]">
-                  <div
-                    class="rounded-full bg-gray-100 w-[30px] h-[30px] p-[3px]"
-                  >
-                    <img
-                      src="src/Assets/Icons/profile.png"
-                      alt="profile"
-                      class="w-full h-full"
-                    />
-                  </div>
-                  <div>
-                    <h4 class="font-semibold text-sm">John Doe</h4>
-                    <p class="text-gray-500 text-[10px]">Farmer</p>
-                  </div>
-                </div>
-
-                <div class="flex items-start justify-center gap-[5px]">
-                  <ion-icon
-                    name="star"
-                    class="text-primary-light w-[16px] h-[16px]"
-                  ></ion-icon>
-                  <p class="text-primary-light font-semibold text-sm">4.5</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="bg-white shadow-md shadow-gray-300 rounded-md">
-            <img
-              src="src/Assets/Img/fruits.png"
-              alt="Product"
-              class="w-full h-[180px] object-cover rounded-t-md"
-            />
-            <div class="p-[10px]">
-              <h3 class="text-xl font-bold">Fresh Fruits</h3>
-              <p class="text-gray-500">
-                Fresh fruits from local farms. 100% organic and healthy.
-              </p>
-              <div class="flex items-center justify-between mt-[20px]">
-                <div class="flex items-start gap-[10px]">
-                  <div
-                    class="rounded-full bg-gray-100 w-[30px] h-[30px] p-[3px]"
-                  >
-                    <img
-                      src="src/Assets/Icons/profile.png"
-                      alt="profile"
-                      class="w-full h-full"
-                    />
-                  </div>
-                  <div>
-                    <h4 class="font-semibold text-sm">John Doe</h4>
-                    <p class="text-gray-500 text-[10px]">Farmer</p>
-                  </div>
-                </div>
-
-                <div class="flex items-start justify-center gap-[5px]">
-                  <ion-icon
-                    name="star"
-                    class="text-primary-light w-[16px] h-[16px]"
-                  ></ion-icon>
-                  <p class="text-primary-light font-semibold text-sm">4.5</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="bg-white shadow-md shadow-gray-300 rounded-md">
-            <img
-              src="src/Assets/Img/fruits.png"
-              alt="Product"
-              class="w-full h-[180px] object-cover rounded-t-md"
-            />
-            <div class="p-[10px]">
-              <h3 class="text-xl font-bold">Fresh Fruits</h3>
-              <p class="text-gray-500">
-                Fresh fruits from local farms. 100% organic and healthy.
-              </p>
-              <div class="flex items-center justify-between mt-[20px]">
-                <div class="flex items-start gap-[10px]">
-                  <div
-                    class="rounded-full bg-gray-100 w-[30px] h-[30px] p-[3px]"
-                  >
-                    <img
-                      src="src/Assets/Icons/profile.png"
-                      alt="profile"
-                      class="w-full h-full"
-                    />
-                  </div>
-                  <div>
-                    <h4 class="font-semibold text-sm">John Doe</h4>
-                    <p class="text-gray-500 text-[10px]">Farmer</p>
-                  </div>
-                </div>
-
-                <div class="flex items-start justify-center gap-[5px]">
-                  <ion-icon
-                    name="star"
-                    class="text-primary-light w-[16px] h-[16px]"
-                  ></ion-icon>
-                  <p class="text-primary-light font-semibold text-sm">4.5</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
       <section class="px-[100px] py-[40px] bg-orange-100">
         <div class="flex items-center justify-start py-[30px]">
           <h2 class="text-2xl font-bold">Featured Shops</h2>
