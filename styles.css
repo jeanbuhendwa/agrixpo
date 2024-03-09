@@ -12,10 +12,4 @@
     padding: 0;
     font-family: "Open Sans", sans-serif;
 }
-
-.bg-img {
-    background-image: url('src/Assets/Img/hero-section.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
+  
