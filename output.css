@@ -759,6 +759,11 @@ video {
   margin-bottom: 0.5rem;
 }
 
+.mx-10{
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+}
+
 .mb-2{
   margin-bottom: 0.5rem;
 }
@@ -1004,6 +1009,10 @@ video {
 
 .w-\[500px\]{
   width: 500px;
+}
+
+.w-\[50\%\]{
+  width: 50%;
 }
 
 .flex-shrink{
@@ -2437,6 +2446,11 @@ video {
   font-size: 16px;
 }
 
+.text-5xl{
+  font-size: 3rem;
+  line-height: 1;
+}
+
 .font-black{
   font-weight: 900;
 }
@@ -3168,6 +3182,16 @@ video {
 
   .md\:text-\[18px\]{
     font-size: 18px;
+  }
+
+  .md\:text-6xl{
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+
+  .md\:text-2xl{
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 
   .md\:font-medium{
