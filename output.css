@@ -681,6 +681,18 @@ video {
   top: 9%;
 }
 
+.top-0{
+  top: 0px;
+}
+
+.top-\[8\%\]{
+  top: 8%;
+}
+
+.top-\[-105\%\]{
+  top: -105%;
+}
+
 .isolate{
   isolation: isolate;
 }
@@ -945,6 +957,10 @@ video {
 
 .h-\[100vh\]{
   height: 100vh;
+}
+
+.h-10{
+  height: 2.5rem;
 }
 
 .min-h-screen{
