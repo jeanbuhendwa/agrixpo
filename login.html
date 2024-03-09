@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGRIXPO | Login</title>
+    <link href="../output.css" rel="stylesheet">
+    <script>
+        function handleLogin(event) {
+            event.preventDefault();
+            alert("Login successful!"); 
+            window.location.href = "index.html"; 
+        }
+    </script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-md">
+        <h2 class="text-2xl font-bold mb-4">User Login</h2>
+        <form onsubmit="handleLogin(event)">
+            <div class="mb-4">
+                <label for="username" class="block mb-2">Username</label>
+                <input type="text" id="username" name="username" class="border p-2 w-full" required>
+            </div>
+            <div class="mb-4">
+                <label for="password" class="block mb-2">Password</label>
+                <input type="password" id="password" name="password" class="border p-2 w-full" required>
+            </div>
+            <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full">Login</button>
+        </form>
+    </div>
+</body>
+</html>
