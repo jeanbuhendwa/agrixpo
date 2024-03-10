@@ -693,6 +693,26 @@ video {
   top: -105%;
 }
 
+.top-\[-200\%\]{
+  top: -200%;
+}
+
+.top-\[-120\%\]{
+  top: -120%;
+}
+
+.top-\[-50\%\]{
+  top: -50%;
+}
+
+.top-\[-10\%\]{
+  top: -10%;
+}
+
+.top-\[-101\%\]{
+  top: -101%;
+}
+
 .isolate{
   isolation: isolate;
 }
@@ -965,6 +985,18 @@ video {
 
 .min-h-screen{
   min-height: 100vh;
+}
+
+.min-h-\[100vh\]{
+  min-height: 100vh;
+}
+
+.min-h-\[120vh\]{
+  min-height: 120vh;
+}
+
+.min-h-\[80vh\]{
+  min-height: 80vh;
 }
 
 .w-8{
