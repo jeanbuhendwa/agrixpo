@@ -16,6 +16,10 @@ module.exports = {
         lg: "1024px", // Desktop devices
       },
     },
+    fontFamily: {
+      title: ["Rufina", "serif"],
+      body: ["Inter", "sans-serif"],
+    },
   },
   plugins: [],
 };
