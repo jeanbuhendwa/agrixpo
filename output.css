@@ -653,6 +653,11 @@ video {
   inset: 0px;
 }
 
+.inset-y-0 {
+  top: 0px;
+  bottom: 0px;
+}
+
 .bottom-0 {
   bottom: 0px;
 }
@@ -671,6 +676,10 @@ video {
 
 .top-\[8\%\] {
   top: 8%;
+}
+
+.right-0 {
+  right: 0px;
 }
 
 .isolate {
@@ -815,6 +824,10 @@ video {
 
 .mt-4 {
   margin-top: 1rem;
+}
+
+.mt-\[100px\] {
+  margin-top: 100px;
 }
 
 .box-border {
@@ -2002,6 +2015,10 @@ video {
   border-width: 1px;
 }
 
+.border-2 {
+  border-width: 2px;
+}
+
 .border-x {
   border-left-width: 1px;
   border-right-width: 1px;
@@ -2226,6 +2243,10 @@ video {
   background-origin: content-box;
 }
 
+.fill-current {
+  fill: currentColor;
+}
+
 .object-contain {
   -o-object-fit: contain;
      object-fit: contain;
@@ -2381,6 +2402,11 @@ video {
   padding-bottom: 1rem;
 }
 
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
 .pb-\[20px\] {
   padding-bottom: 20px;
 }
@@ -2391,6 +2417,14 @@ video {
 
 .pt-\[100px\] {
   padding-top: 100px;
+}
+
+.pt-10 {
+  padding-top: 2.5rem;
+}
+
+.pt-5 {
+  padding-top: 1.25rem;
 }
 
 .text-left {
@@ -3116,6 +3150,11 @@ video {
 .placeholder\:text-gray-300::placeholder {
   --tw-text-opacity: 1;
   color: rgb(209 213 219 / var(--tw-text-opacity));
+}
+
+.hover\:border-\[\#B54300\]:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(181 67 0 / var(--tw-border-opacity));
 }
 
 .hover\:bg-blue-700:hover {
