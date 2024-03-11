@@ -1,193 +1,309 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=\, initial-scale=1.0" />
-    
-        <!-- The below link to the external css file -->
-        <link rel="stylesheet" type="text/css" href="../../styles.css" />
-        <link href="../../output.css" rel="stylesheet" />
-    
-        <!-- Importing Icon -->
-        <script
-          type="module"
-          src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-        ></script>
-        <script
-          nomodule
-          src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-        ></script>
-    
-        <!-- The below is the favicon -->
-        <link rel="icon" type="image/jpg" href="../../src/Assets/favIcon.jpg" />
-    
-        <!-- The below is the title -->
-        <title>AGRIXPO</title>
-      </head>
-</head>
-<body>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=\, initial-scale=1.0" />
+
+      <!-- The below link to the external css file -->
+      <link rel="stylesheet" type="text/css" href="../../styles.css" />
+      <link href="../../output.css" rel="stylesheet" />
+
+      <!-- Importing Icon -->
+      <script
+        type="module"
+        src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+      ></script>
+      <script
+        nomodule
+        src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+      ></script>
+
+      <!-- The below is the favicon -->
+      <link rel="icon" type="image/jpg" href="../../src/Assets/favIcon.jpg" />
+
+      <!-- The below is the title -->
+      <title>AGRIXPO</title>
+    </head>
+  </head>
+  <body>
     <header class="bg-primary-light fixed w-full h-100 z-50 shadow-md">
-        <nav
-          class="flex items-center justify-between w-[95%] md:w-[90%] mx-auto px-[20px] py-[10px] relative"
-        >
-          <div>
-            <a href="#" class="flex items-center gap-1">
-              <img src="../../src/Assets/logo.jpg" alt="logo" class="w-9" />
-              <div class="flex flex-col items-start">
-                <span class="font-black text-xl"
-                  >AGRI<span class="text-white">XPO</span></span
-                >
-                <span class="text-xs text-white mt-[-5px] font-semibold"
-                  >By Foroden</span
-                >
-              </div>
-            </a>
-          </div>
-          <div class="flex justify-between items-center gap-x-[50px]">
-            <div
-              class="nav-links md:static bg-primary-light fixed md:min-h-fit min-h-[80vh] left-0 top-[-100%] w-full md:w-auto flex flex-col md:flex-row items-center md:justify-center md:p-[5px] justify-start p-[100px] md:gap-[2vw] gap-4 font-bold md:font-medium z-50 transition-all duration-300"
-            >
-              <ul
-                class="flex md:flex-row text-xl md:text-base flex-col md:items-center md:gap-[2vw] gap-[15px] font-bold md:font-medium uppercase"
-              >
-                <li>
-                  <a
-                    href="../../index.html"
-                    class="md:font-bold text-black hover:text-white transition-all duration-[0.3s]"
-                    >Home</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="./about.html"
-                    class="md:font-bold text-black hover:text-white transition-all duration-[0.3s]"
-                    >About</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="./products.html"
-                    class="md:font-bold text-black hover:text-white transition-all duration-[0.3s]"
-                    >Products</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href=""
-                    class="md:font-bold text-white transition-all duration-[0.3s]"
-                    >Contact Us</a
-                  >
-                </li>
-              </ul>
-            </div>
-            <div class="flex items-center gap-[10px]">
-              <div class="flex items-center justify-center gap-3">
-                <ion-icon class="text-2xl" name="chatbubbles"></ion-icon>
-                <ion-icon class="text-2xl" name="notifications"></ion-icon>
-              </div>
-              <ion-icon
-                onclick="onToggleMenu(this)"
-                class="md:hidden cursor-pointer w-8 h-8 bg-primary-light p-[5px] rounded-sm transition-all duration-300"
-                name="menu-outline"
-              ></ion-icon>
-            </div>
-          </div>
-        </nav>
-      </header>
-      <main class="py-[100px] bg-[#ffe2c3] md:px-[100px] px-[30px]">
-        <section>
-          <div class="flex items-center justify-center py-[10px] mb-5">
-            <h2 class="text-primary-dark font-title text-5xl font-bold py-10 text-center">Contact Us</h2>
-          </div>
-          
-          
-        </section>
-      </main>
-      <footer
-        class="bg-black text-white py-[40px] md:px-[100px] px-[30px] relative"
+      <nav
+        class="flex items-center justify-between w-[95%] md:w-[90%] mx-auto px-[20px] py-[10px] relative"
       >
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-[30px]">
-          <div>
-            <h3 class="text-2xl font-bold text-primary-light">AGRIXPO</h3>
-            <p class="text-gray-400 mt-[10px]">
-              Discover fresh local farm products with AGRIXPO. Our platform
-              connects you directly to local farmers, ensuring you get the best
-              quality products while supporting local economies.
-            </p>
-          </div>
-          <div>
-            <h3 class="text-xl font-bold">Quick Links</h3>
-            <ul class="mt-[10px]">
+        <div>
+          <a href="../../index.html" class="flex items-center gap-1">
+            <img src="../../src/Assets/logo.jpg" alt="logo" class="w-9" />
+            <div class="flex flex-col items-start">
+              <span class="font-black text-xl"
+                >AGRI<span class="text-white">XPO</span></span
+              >
+              <span class="text-xs text-white mt-[-5px] font-semibold"
+                >By Foroden</span
+              >
+            </div>
+          </a>
+        </div>
+        <div class="flex justify-between items-center gap-x-[50px]">
+          <div
+            class="nav-links md:static bg-primary-light fixed md:min-h-fit min-h-[80vh] left-0 top-[-100%] w-full md:w-auto flex flex-col md:flex-row items-center md:justify-center md:p-[5px] justify-start p-[100px] md:gap-[2vw] gap-4 font-bold md:font-medium z-50 transition-all duration-300"
+          >
+            <ul
+              class="flex md:flex-row text-xl md:text-base flex-col md:items-center md:gap-[2vw] gap-[15px] font-bold md:font-medium uppercase"
+            >
               <li>
                 <a
-                  href=""
-                  class="hover:text-orange-500 transition-all duration-[0.3s]"
+                  href="../../index.html"
+                  class="md:font-bold text-black hover:text-white transition-all duration-[0.3s]"
                   >Home</a
                 >
               </li>
               <li>
                 <a
-                  href=""
-                  class="hover:text-orange-500 transition-all duration-[0.3s]"
+                  href="./about.html"
+                  class="md:font-bold text-black hover:text-white transition-all duration-[0.3s]"
                   >About</a
                 >
               </li>
               <li>
                 <a
-                  href=""
-                  class="hover:text-orange-500 transition-all duration-[0.3s]"
+                  href="./products.html"
+                  class="md:font-bold text-black hover:text-white transition-all duration-[0.3s]"
                   >Products</a
                 >
               </li>
               <li>
                 <a
                   href=""
-                  class="hover:text-orange-500 transition-all duration-[0.3s]"
-                  >Contact</a
+                  class="md:font-bold text-white transition-all duration-[0.3s]"
+                  >Contact Us</a
                 >
               </li>
             </ul>
           </div>
-          <div>
-            <h3 class="text-xl font-bold">Contact</h3>
-            <p class="mt-[10px]">+000 000 000 000</p>
-            <p>123, ABC Street, XYZ City, Country, Pincode</p>
+          <div class="flex items-center gap-[10px]">
+            <div class="flex items-center justify-center gap-3">
+              <ion-icon class="text-2xl" name="chatbubbles"></ion-icon>
+              <ion-icon class="text-2xl" name="notifications"></ion-icon>
+            </div>
+            <ion-icon
+              onclick="onToggleMenu(this)"
+              class="md:hidden cursor-pointer w-8 h-8 bg-primary-light p-[5px] rounded-sm transition-all duration-300"
+              name="menu-outline"
+            ></ion-icon>
           </div>
-          <div>
-            <h3 class="text-xl font-bold">Social Media</h3>
-            <div class="flex items-center gap-[10px] mt-[10px] mb-10">
-              <a
-                href="https://www.facebook.com"
-                class="text-2xl hover:text-orange-500"
-                ><ion-icon name="logo-facebook"></ion-icon
-              ></a>
-              <a
-                href="https://www.instagram.com"
-                class="text-2xl hover:text-orange-500"
-                ><ion-icon name="logo-instagram"></ion-icon
-              ></a>
-              <a
-                href="https://www.twitter.com"
-                class="text-2xl hover:text-orange-500"
-                ><ion-icon name="logo-twitter"></ion-icon
-              ></a>
-              <a
-                href="https://www.linkedin.com"
-                class="text-2xl hover:text-orange-500"
-                ><ion-icon name="logo-linkedin"></ion-icon
-              ></a>
+        </div>
+      </nav>
+    </header>
+    <main class="py-[100px] bg-[#ffe2c3] md:px-[100px] px-[30px]">
+      <section>
+        <div class="flex items-center justify-center py-[10px] mb-5">
+          <h2
+            class="text-primary-dark font-title text-5xl font-bold py-10 text-center"
+          >
+            Contact Us
+          </h2>
+        </div>
+        <div class="container mx-auto px-4">
+          <div
+            class="flex flex-col md:flex-row items-center justify-between gap-8"
+          >
+            <div class="w-full md:w-1/2">
+              <form class="space-y-4">
+                <div>
+                  <label
+                    for="name"
+                    class="block text-sm font-medium text-gray-700"
+                    >Name</label
+                  >
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    class="mt-1 block w-full px-3 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#D35400] border-primary-light placeholder:text-sm placeholder:text-primary-light"
+                    placeholder="Your Name"
+                  />
+                </div>
+
+                <div class="flex flex-wrap -mx-2">
+                  <div class="px-2 w-full sm:w-1/2">
+                    <label
+                      for="email"
+                      class="block text-sm font-medium text-gray-700"
+                      >Email</label
+                    >
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      class="mt-1 block w-full px-3 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#D35400] border-primary-light placeholder:text-sm placeholder:text-primary-light"
+                      placeholder="you@example.com"
+                    />
+                  </div>
+                  <div class="px-2 w-full sm:w-1/2">
+                    <label
+                      for="phone"
+                      class="block text-sm font-medium text-gray-700"
+                      >Phone Number</label
+                    >
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      class="mt-1 block w-full px-3 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#D35400] border-primary-light placeholder:text-sm placeholder:text-primary-light"
+                      placeholder="+1234567890"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label
+                    for="message"
+                    class="block text-sm font-medium text-gray-700"
+                    >Message</label
+                  >
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="4"
+                    class="mt-1 block w-full px-3 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#D35400] border-primary-light placeholder:text-sm placeholder:text-primary-light"
+                    placeholder="Your message"
+                  ></textarea>
+                </div>
+
+                <button
+                  type="submit"
+                  class="mt-2 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-primary-light hover:bg-[#B54300] transition-all duration-300"
+                >
+                  Submit
+                </button>
+              </form>
+            </div>
+
+            <div class="w-full md:w-1/2 flex flex-col items-start">
+              <p class="mb-4 text-lg font-semibold">
+                For questions, technical assistance, or more information, you
+                can reach us at:
+              </p>
+              <ul class="space-y-3">
+                <li class="flex items-center justify-start">
+                  <a
+                    href="tel:+15551234567"
+                    class="flex items-center no-underline text-black hover:text-[#D35400] transition-colors duration-200 ease-in-out"
+                  >
+                    <ion-icon name="call" class="mr-2 text-lg"></ion-icon>
+                    +1 (555) 123-4567
+                  </a>
+                </li>
+                <li class="flex items-center justify-start">
+                  <a
+                    href="mailto:support@example.com"
+                    class="flex items-center no-underline text-black hover:text-[#D35400] transition-colors duration-200 ease-in-out"
+                  >
+                    <ion-icon name="mail" class="mr-2 text-lg"></ion-icon>
+                    support@example.com
+                  </a>
+                </li>
+                <li class="flex items-center justify-start">
+                  <a
+                    href="#"
+                    class="flex items-center no-underline text-black hover:text-[#D35400] transition-colors duration-200 ease-in-out"
+                  >
+                    <ion-icon name="location" class="mr-2 text-lg"></ion-icon>
+                    1234 Example St, City, Country
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
-        <div class="absolute bottom-0 md:right-20 pb-[20px] pr-[20px]">
-          <a
-            href="src/Pages/admin-login.html"
-            class="bg-primary-light hover:bg-orange-600 text-white font-semibold text-[16px] py-1 px-2 rounded transition duration-300 ease-in-out"
-          >
-            Admin Login
-          </a>
+      </section>
+    </main>
+    <footer
+      class="bg-black text-white py-[40px] md:px-[100px] px-[30px] relative"
+    >
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-[30px]">
+        <div>
+          <h3 class="text-2xl font-bold text-primary-light">AGRIXPO</h3>
+          <p class="text-gray-400 mt-[10px]">
+            Discover fresh local farm products with AGRIXPO. Our platform
+            connects you directly to local farmers, ensuring you get the best
+            quality products while supporting local economies.
+          </p>
         </div>
-      </footer>
-</body>
+        <div>
+          <h3 class="text-xl font-bold">Quick Links</h3>
+          <ul class="mt-[10px]">
+            <li>
+              <a
+                href=""
+                class="hover:text-orange-500 transition-all duration-[0.3s]"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href=""
+                class="hover:text-orange-500 transition-all duration-[0.3s]"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href=""
+                class="hover:text-orange-500 transition-all duration-[0.3s]"
+                >Products</a
+              >
+            </li>
+            <li>
+              <a
+                href=""
+                class="hover:text-orange-500 transition-all duration-[0.3s]"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold">Contact</h3>
+          <p class="mt-[10px]">+000 000 000 000</p>
+          <p>123, ABC Street, XYZ City, Country, Pincode</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold">Social Media</h3>
+          <div class="flex items-center gap-[10px] mt-[10px] mb-10">
+            <a
+              href="https://www.facebook.com"
+              class="text-2xl hover:text-orange-500"
+              ><ion-icon name="logo-facebook"></ion-icon
+            ></a>
+            <a
+              href="https://www.instagram.com"
+              class="text-2xl hover:text-orange-500"
+              ><ion-icon name="logo-instagram"></ion-icon
+            ></a>
+            <a
+              href="https://www.twitter.com"
+              class="text-2xl hover:text-orange-500"
+              ><ion-icon name="logo-twitter"></ion-icon
+            ></a>
+            <a
+              href="https://www.linkedin.com"
+              class="text-2xl hover:text-orange-500"
+              ><ion-icon name="logo-linkedin"></ion-icon
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="absolute bottom-0 md:right-20 pb-[20px] pr-[20px]">
+        <a
+          href="src/Pages/admin-login.html"
+          class="bg-primary-light hover:bg-orange-600 text-white font-semibold text-[16px] py-1 px-2 rounded transition duration-300 ease-in-out"
+        >
+          Admin Login
+        </a>
+      </div>
+    </footer>
+    <script src="../scripts/index.js"></script>
+  </body>
 </html>
