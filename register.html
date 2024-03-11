@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=\, initial-scale=1.0" />
+
+    <!-- The below link to the external css file -->
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link href="./output.css" rel="stylesheet" />
+
+    <!-- Importing Icon -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <!-- The below is the favicon -->
+    <link rel="icon" type="image/jpg" href="src/Assets/favIcon.jpg" />
+
+    <!-- The below is the title -->
+    <title>Register</title>
+  </head>
+  <body>
+    <div class="min-h-screen flex flex-col md:flex-row">
+      <div
+        class="hidden md:flex w-full md:w-1/2 h-auto bg-cover bg-center"
+        style="background-image: url('./src/Assets/Img/login.jpg')"
+      ></div>
+      <div class="w-full md:w-1/2 flex justify-center items-center p-8">
+        <div class="bg-white p-8 w-full max-w-md">
+          <div
+            class="text-4xl text-center py-10 font-bold mb-4 text-primary-light drop-shadow-md"
+          >
+            <h2 id="loginTitle">Login</h2>
+          </div>
+          <div class="flex justify-around mb-4">
+            <button
+              id="buyerBtn"
+              class="role-btn bg-white w-full py-4 text-lg font-semibold focus:outline-none focus:ring-2 focus:ring-primary-light focus:ring-opacity-50 transition duration-150 ease-in-out mb-4"
+              data-role="Buyer"
+            >
+              Login as a Buyer
+            </button>
+            <button
+              id="farmerBtn"
+              class="role-btn bg-white w-full py-4 text-lg font-semibold focus:outline-none focus:ring-2 focus:ring-primary-light focus:ring-opacity-50 transition duration-150 ease-in-out mb-4"
+              data-role="Farmer"
+            >
+              Login as a Farmer
+            </button>
+          </div>
+
+          <form
+            id="loginForm"
+            onsubmit="handleLogin(event)"
+            class="space-y-4 hidden"
+          >
+            <div>
+              <label
+                for="username"
+                class="block mb-2 text-[#384E46] text-lg font-semibold"
+                >Username</label
+              >
+              <input
+                type="text"
+                id="username"
+                name="username"
+                required
+                class="mt-1 block w-full px-3 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#D35400] border-primary-light placeholder:text-sm placeholder:text-gray-300"
+                placeholder="Username "
+              />
+            </div>
+            <div>
+              <label
+                for="password"
+                class="block mb-2 text-[#384E46] text-lg font-semibold"
+                >Password</label
+              >
+              <input
+                type="password"
+                id="password"
+                name="password"
+                required
+                class="mt-1 block w-full px-3 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#D35400] border-primary-light placeholder:text-sm placeholder:text-gray-300"
+                placeholder="Password "
+              />
+            </div>
+            <button
+              type="submit"
+              class="mt-2 w-full text-center py-2 border border-transparent text-sm font-semibold rounded-md shadow-sm text-white bg-primary-light hover:bg-[#B54300] transition-all duration-300"
+            >
+              Login
+            </button>
+          </form>
+
+          <div class="mt-4 flex items-center justify-center">
+            <button
+              class="flex items-center justify-center px-4 py-2 border border-gray-300 rounded-full hover:bg-D35400 hover:border-D35400 transition-colors duration-200"
+            >
+              <ion-icon name="logo-google" class="w-4 h-4 mr-2"></ion-icon>
+              Login with Google
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function handleLogin(event) {
+        event.preventDefault();
+        alert("Login successful!");
+        window.location.href = "index.html";
+      }
+    </script>
+    <script src="./src/scripts/index.js"></script>
+  </body>
+</html>
