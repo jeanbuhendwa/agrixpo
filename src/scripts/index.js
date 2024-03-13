@@ -24,24 +24,3 @@ roleButtons.forEach((button) => {
     });
   });
 });
-
-// Function for the name on homepage
-document.getElementById("bounceIcon").addEventListener("click", function () {
-  var textElement = document.getElementById("textAfterClick");
-  if (
-    textElement.style.display === "none" ||
-    textElement.style.display === ""
-  ) {
-    textElement.style.display = "block";
-    setTimeout(function () {
-      textElement.style.opacity = 1;
-      textElement.style.transform = "translateY(0)";
-    }, 10);
-  } else {
-    textElement.style.opacity = 0;
-    textElement.style.transform = "translateY(20px)";
-    setTimeout(function () {
-      textElement.style.display = "none";
-    }, 500);
-  }
-});

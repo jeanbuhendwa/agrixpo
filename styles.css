@@ -16,6 +16,11 @@
   font-family: "Open Sans", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+
 @keyframes bounce {
   0%,
   20%,
