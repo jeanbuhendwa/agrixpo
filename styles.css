@@ -46,3 +46,16 @@ html {
   opacity: 0;
   transition: opacity 0.5s, transform 0.5s;
 }
+
+.grid_container {
+  display: grid;
+  grid-template-columns: 15% 60% 20%;
+  gap: 2%;
+}
+
+@media screen and (max-width: 768px) {
+  .grid_container {
+    grid-template-columns: 100%;
+  }
+  
+}
