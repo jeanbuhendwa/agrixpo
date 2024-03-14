@@ -57,5 +57,10 @@ html {
   .grid_container {
     grid-template-columns: 100%;
   }
-  
+}
+
+.product_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 2%;
 }
