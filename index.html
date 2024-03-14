@@ -61,8 +61,12 @@
                 In</a>
             </div>
           </div>
+          <div class="hidden md:flex items-center justify-center gap-2 cursor-pointer">
+            <ion-icon name="help-circle-outline" class="text-2xl font-extrabold"></ion-icon>
+            <span class=" font-semibold">Help</span>
+          </div>
 
-          <div class="flex items-center justify-center gap-2">
+          <div class="flex items-center justify-center gap-2 cursor-pointer">
             <ion-icon name="cart" class="text-2xl"></ion-icon>
             <span class="hidden md:block font-semibold">Cart</span>
           </div>
@@ -109,6 +113,11 @@
           </a>
           <a href=""
             class="flex items-center justify-center gap-2 text-black font-bold hover:text-white transition-all duration-300">
+            <ion-icon name="call-outline"></ion-icon>
+            <span>Contact Us</span>
+          </a>
+          <a href=""
+            class="flex items-center justify-center gap-2 text-black font-bold hover:text-white transition-all duration-300">
             <ion-icon name="information-circle-outline"></ion-icon>
             <span>Helps</span>
           </a>
@@ -117,8 +126,8 @@
     </nav>
   </header>
 
-  <main class="md:pt-[70px] pt-[110px] bg-[#ffe2c3] pb-[50px]">
-    <section class="grid_container md:px-[30px] px-1 h-[60vh] md:h-[75vh]">
+  <main class="md:pt-[70px] pt-[110px] bg-[#ffe2c3] pb-[50px] md:flex md:flex-col md:items-center">
+    <section class="grid_container md:px-[30px] px-1 h-[60vh] md:h-[75vh] mb-[30px]">
       <section class="bg-black md:block hidden">
         <ul
           class="flex md:flex-col text-base md:text-base flex-col md:items-start px-5 py-10 md:gap-2 md:font-medium uppercase">
@@ -145,6 +154,11 @@
             class="flex items-center justify-center gap-2 text-white font-normal hover:text-primary-light transition-all duration-300">
             <ion-icon name="bag-handle-outline"></ion-icon>
             <span>Orders</span>
+          </a>
+          <a href=""
+            class="flex items-center justify-center gap-2 text-white font-normal hover:text-primary-light transition-all duration-300">
+            <ion-icon name="call-outline"></ion-icon>
+            <span>Contact Us</span>
           </a>
           <a href=""
             class="flex items-center justify-center gap-2 text-white font-normal hover:text-primary-light transition-all duration-300">
@@ -183,30 +197,43 @@
 
 
 
-      <section class="hidden md:block bg-primary-light  p-5">
-        <div class="flex flex-col items-center justify-start">
+      <section class="hidden md:flex flex-col justify-between gap-10 bg-primary-light  p-2">
+        <div class="flex flex-col items-center justify-start pt-10">
           <img src="src/Assets/Img/home-log.jpg" class="w-[80px] h-[80px]" alt="hero-section-2" />
         </div>
 
-        <div class="flex items-center justify-start gap-2 mt-10">
-          <ion-icon name="help-circle-outline" class="text-4xl text-[#305349] font-bold"></ion-icon>
-          <div class="leading-none flex flex-col">
-            <p class="text-white font-semibold text-base">NEED HELP ?</p>
-            <span class="text-[12px]">contact us</span>
+        <div class="bg-white flex flex-col gap-5 py-5 px-2">
+          <div class="flex items-center justify-start gap-2 mt-10">
+            <ion-icon name="help-circle-outline" class="text-4xl text-[#305349] font-bold"></ion-icon>
+            <div class="leading-none flex flex-col">
+              <p class="text-[#305349] font-semibold text-base">NEED HELP ?</p>
+              <span class="text-[12px]">contact us</span>
+            </div>
+
+
           </div>
-
-
-        </div>
-        <div class="flex items-center justify-start gap-2 mt-5">
-          <ion-icon name="star-half" class="text-3xl text-[#305349] font-bold"></ion-icon>
-          <div class="leading-none flex flex-col">
-            <p class="text-white font-semibold text-base">FEEDBACK</p>
-            <span class="text-[12px]">Leave your feedback</span>
+          <div class="flex items-center justify-start gap-2 mt-5">
+            <ion-icon name="star-half" class="text-3xl text-[#305349] font-bold"></ion-icon>
+            <div class="leading-none flex flex-col">
+              <p class="text-[#305349] font-semibold text-base">FEEDBACK</p>
+              <span class="text-[12px]">Leave your feedback</span>
+            </div>
+          </div>
+          <div class="flex items-center justify-start gap-2 mt-5">
+            <ion-icon name="thumbs-up-outline" class="text-3xl text-[#305349] font-bold"></ion-icon>
+            <div class="leading-none flex flex-col">
+              <p class="text-[#305349] font-semibold text-base">QUALITY ASSURANCE</p>
+              <span class="text-[12px]">Guarantee</span>
+            </div>
           </div>
         </div>
 
       </section>
     </section>
+    <section id="productGrid" class="md:hidden block">
+
+    </section>
+    <!-- <button id="showMoreBtn" class="text-center mr-[100px] w-[200px] md:w-[200px] px-4 py-2 bg-primary-light text-white font-bold rounded shadow mt-4 hover:bg-primary transition duration-300">Show More</button> -->
 
   </main>
   <footer class="bg-black text-white py-[40px] md:px-[100px] px-[30px] relative">
