@@ -102,9 +102,19 @@ const categories = [
     image: "https://source.unsplash.com/featured/?seafood",
     link: "/seafood.html",
   },
+  {
+    name: "Bakery",
+    image: "https://source.unsplash.com/featured/?bakery",
+    link: "/bakery.html",
+  },
+  {
+    name: "Fish",
+    image: "https://source.unsplash.com/featured/?fish",
+    link: "/fish.html",
+  },
 ];
 
-const initialDisplayCount = 8;
+const initialDisplayCount = 10;
 
 window.addEventListener("DOMContentLoaded", (event) => {
   const grid = document.getElementById("productGrid");
@@ -132,6 +142,6 @@ window.addEventListener("DOMContentLoaded", (event) => {
     document.querySelectorAll(".category-card.hidden").forEach((card) => {
       card.classList.remove("hidden");
     });
-    showMoreBtn.classList.add("hidden"); // Hide the button after expanding
+    showMoreBtn.classList.add("hidden");
   });
 });

@@ -753,14 +753,18 @@ video {
   clear: none;
 }
 
+.m-10 {
+  margin: 2.5rem;
+}
+
 .-mx-2 {
   margin-left: -0.5rem;
   margin-right: -0.5rem;
 }
 
-.mx-\[20px\] {
-  margin-left: 20px;
-  margin-right: 20px;
+.mx-5 {
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
 }
 
 .mx-auto {
@@ -773,9 +777,9 @@ video {
   margin-bottom: 0.5rem;
 }
 
-.mx-5 {
-  margin-left: 1.25rem;
-  margin-right: 1.25rem;
+.my-10 {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
 }
 
 .mb-0 {
@@ -804,6 +808,10 @@ video {
 
 .mr-2 {
   margin-right: 0.5rem;
+}
+
+.mr-\[100px\] {
+  margin-right: 100px;
 }
 
 .mt-1 {
@@ -836,10 +844,6 @@ video {
 
 .mt-\[70px\] {
   margin-top: 70px;
-}
-
-.mr-\[100px\] {
-  margin-right: 100px;
 }
 
 .box-border {
@@ -957,8 +961,8 @@ video {
   height: 100vh;
 }
 
-.h-\[150px\] {
-  height: 150px;
+.h-\[160px\] {
+  height: 160px;
 }
 
 .h-\[60vh\] {
@@ -981,8 +985,12 @@ video {
   height: 100vh;
 }
 
-.h-\[160px\] {
-  height: 160px;
+.h-\[200px\] {
+  height: 200px;
+}
+
+.h-\[350px\] {
+  height: 350px;
 }
 
 .min-h-\[80vh\] {
@@ -1035,6 +1043,14 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.w-\[100px\] {
+  width: 100px;
+}
+
+.w-\[300px\] {
+  width: 300px;
 }
 
 .max-w-md {
@@ -2148,6 +2164,11 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#ffffff\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
 .bg-opacity-50 {
   --tw-bg-opacity: 0.5;
 }
@@ -2302,9 +2323,18 @@ video {
   padding: 5px;
 }
 
+.p-10 {
+  padding: 2.5rem;
+}
+
 .px-1 {
   padding-left: 0.25rem;
   padding-right: 0.25rem;
+}
+
+.px-10 {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
 }
 
 .px-2 {
@@ -2400,6 +2430,14 @@ video {
 
 .pt-\[110px\] {
   padding-top: 110px;
+}
+
+.pt-5 {
+  padding-top: 1.25rem;
+}
+
+.pb-10 {
+  padding-bottom: 2.5rem;
 }
 
 .text-left {
@@ -2521,6 +2559,10 @@ video {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
+}
+
+.text-\[18px\] {
+  font-size: 18px;
 }
 
 .font-black {
@@ -2676,6 +2718,11 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-primary {
+  --tw-text-opacity: 1;
+  color: rgb(211 84 0 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -3218,14 +3265,14 @@ html {
   background-color: rgb(234 88 12 / var(--tw-bg-opacity));
 }
 
-.hover\:bg-primary-light:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 164 67 / var(--tw-bg-opacity));
-}
-
 .hover\:bg-primary:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(211 84 0 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-primary-light:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 164 67 / var(--tw-bg-opacity));
 }
 
 .hover\:font-bold:hover {
@@ -3330,16 +3377,6 @@ html {
     order: 0;
   }
 
-  .md\:mx-1 {
-    margin-left: 0.25rem;
-    margin-right: 0.25rem;
-  }
-
-  .md\:mx-11 {
-    margin-left: 2.75rem;
-    margin-right: 2.75rem;
-  }
-
   .md\:mx-10 {
     margin-left: 2.5rem;
     margin-right: 2.5rem;
@@ -3386,6 +3423,10 @@ html {
     width: 50%;
   }
 
+  .md\:w-\[200px\] {
+    width: 200px;
+  }
+
   .md\:w-\[60\%\] {
     width: 60%;
   }
@@ -3406,8 +3447,8 @@ html {
     width: auto;
   }
 
-  .md\:w-\[200px\] {
-    width: 200px;
+  .md\:w-\[300px\] {
+    width: 300px;
   }
 
   .md\:grid-cols-2 {
@@ -3420,6 +3461,10 @@ html {
 
   .md\:grid-cols-5 {
     grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .md\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .md\:flex-row {
@@ -3471,6 +3516,11 @@ html {
   .md\:px-\[60px\] {
     padding-left: 60px;
     padding-right: 60px;
+  }
+
+  .md\:px-10 {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
   }
 
   .md\:pt-\[70px\] {

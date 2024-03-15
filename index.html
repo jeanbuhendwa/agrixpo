@@ -29,7 +29,7 @@
 
 <body>
   <header class="bg-primary-light fixed top-0 left-0 w-full z-50 shadow-md">
-    <nav class="w-[100%] md:w-[95%] mx-auto px-4 py-2 relative">
+    <nav class="w-[100%] md:w-[95%] mx-auto px-10 py-2 relative">
       <div class="flex justify-between items-center">
         <!-- Logo and Menu Icon for mobile -->
         <div class="flex items-center gap-3">
@@ -91,12 +91,12 @@
             <ion-icon name="home"></ion-icon>
             <span>Home</a>
           </a>
-          <a href=""
+          <a href="#about"
             class="flex items-center justify-center gap-2 text-black font-bold hover:text-white transition-all duration-300">
             <ion-icon name="ellipsis-vertical"></ion-icon>
             <span>About Us</span>
           </a>
-          <a href=""
+          <a href="#products"
             class="flex items-center justify-center gap-2 text-black font-bold hover:text-white transition-all duration-300">
             <ion-icon name="apps"></ion-icon>
             <span>Products</span>
@@ -111,7 +111,7 @@
             <ion-icon name="bag-handle-outline"></ion-icon>
             <span>Orders</span>
           </a>
-          <a href=""
+          <a href="#contact"
             class="flex items-center justify-center gap-2 text-black font-bold hover:text-white transition-all duration-300">
             <ion-icon name="call-outline"></ion-icon>
             <span>Contact Us</span>
@@ -126,7 +126,7 @@
     </nav>
   </header>
 
-  <main class="md:pt-[70px] pt-[110px] bg-[#ffe2c3] pb-[50px] md:flex md:flex-col md:items-center">
+  <main class="md:pt-[70px] pt-[110px] bg-[#ffe2c3]">
     <section class="grid_container md:px-[30px] px-1 h-[60vh] md:h-[75vh] mb-[30px]">
       <section class="bg-black md:block hidden">
         <ul
@@ -135,12 +135,12 @@
             <ion-icon name="home"></ion-icon>
             <span>Home</a>
           </a>
-          <a href=""
+          <a href="#about"
             class="flex items-center justify-center gap-2 text-white font-normal hover:text-primary-light transition-all duration-300">
             <ion-icon name="ellipsis-vertical"></ion-icon>
             <span>About Us</span>
           </a>
-          <a href=""
+          <a href="#products"
             class="flex items-center justify-center gap-2 text-white font-normal hover:text-primary-light transition-all duration-300">
             <ion-icon name="apps"></ion-icon>
             <span>Products</span>
@@ -155,7 +155,7 @@
             <ion-icon name="bag-handle-outline"></ion-icon>
             <span>Orders</span>
           </a>
-          <a href=""
+          <a href="#contact"
             class="flex items-center justify-center gap-2 text-white font-normal hover:text-primary-light transition-all duration-300">
             <ion-icon name="call-outline"></ion-icon>
             <span>Contact Us</span>
@@ -230,10 +230,141 @@
 
       </section>
     </section>
-    <section id="productGrid" class="md:hidden block">
+    <section id="products">
+      <h2
+        class="text-primary-light font-title text-4xl font-bold py-5 text-center bg-black mb-5 flex items-center justify-center gap-5 hover:text-white transition-all duration-300">
+        <ion-icon name="apps"></ion-icon>Our Products
+      </h2>
+      <article id="productGrid" class="md:hidden block">
+      </article>
+      <!-- <button id="showMoreBtn" class="text-center mr-[100px] w-[200px] md:w-[200px] px-4 py-2 bg-primary-light text-white font-bold rounded shadow mt-4 hover:bg-primary transition duration-300">Show More</button> -->
+    </section>
+
+    <section class="my-10" id="about">
+      <h2
+        class="text-primary-light font-title text-4xl font-bold py-5 text-center bg-black mb-5 flex items-center justify-center gap-5 hover:text-white transition-all duration-300">
+        <ion-icon name="accessibility-outline"></ion-icon>About Us
+      </h2>
+      <article class="flex flex-col items-center justify-center gap-10 px-10 py-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="md:order-none">
+            <p class="font-body text-[18px] text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Maxime totam praesentium molestias minus odio quam consequatur dolorem culpa numquam quaerat, iusto
+              repudiandae incidunt reprehenderit, non rem laborum assumenda enim. Atque? Lorem ipsum, dolor sit amet
+              consectetur adipisicing elit. Commodi quos, voluptas at expedita consequuntur quia harum recusandae quidem
+              corrupti cupiditate minima reiciendis autem earum laudantium? Id a eum facere ipsum! Lorem ipsum dolor sit
+              amet consectetur adipisicing elit. Officiis mollitia, officia laudantium atque esse, molestiae accusamus
+              voluptatem repudiandae sed tempore minus nihil, totam iusto! Quisquam dolores error cupiditate officiis
+              vitae. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur velit eius, culpa placeat
+              corporis, excepturi reprehenderit similique libero et eligendi nam facilis nemo reiciendis autem, nisi
+              repellendus aliquid incidunt ratione.</p>
+          </div>
+          <div class="order-first md:order-none">
+            <img src="./src/Assets/Img/about.jpg" alt="about" class="h-[350px] w-full object-cover" />
+          </div>
+        </div>
+      </article>
 
     </section>
-    <!-- <button id="showMoreBtn" class="text-center mr-[100px] w-[200px] md:w-[200px] px-4 py-2 bg-primary-light text-white font-bold rounded shadow mt-4 hover:bg-primary transition duration-300">Show More</button> -->
+
+    <section id="contact">
+      <h2
+        class="text-primary-light font-title text-4xl font-bold py-5 text-center bg-black mb-5 flex items-center justify-center gap-5 hover:text-white transition-all duration-300">
+        <ion-icon name="call-outline"></ion-icon>Contact Us
+      </h2>
+      <div class="container md:px-10 px-4 py-10">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+          <div class="w-full md:w-1/2">
+            <form class="space-y-4">
+              <div>
+                <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                <input type="text" id="name" name="name"
+                  class="mt-1 block w-full px-3 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#D35400] border-primary-light placeholder:text-sm placeholder:text-primary-light"
+                  placeholder="Your Name" />
+              </div>
+
+              <div class="flex flex-wrap -mx-2">
+                <div class="px-2 w-full sm:w-1/2">
+                  <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                  <input type="email" id="email" name="email"
+                    class="mt-1 block w-full px-3 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#D35400] border-primary-light placeholder:text-sm placeholder:text-primary-light"
+                    placeholder="you@example.com" />
+                </div>
+                <div class="px-2 w-full sm:w-1/2">
+                  <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
+                  <input type="tel" id="phone" name="phone"
+                    class="mt-1 block w-full px-3 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#D35400] border-primary-light placeholder:text-sm placeholder:text-primary-light"
+                    placeholder="+1234567890" />
+                </div>
+              </div>
+
+              <div>
+                <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                <textarea id="message" name="message" rows="4"
+                  class="mt-1 block w-full px-3 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#D35400] border-primary-light placeholder:text-sm placeholder:text-primary-light"
+                  placeholder="Your message"></textarea>
+              </div>
+
+              <button type="submit"
+                class="mt-2 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-primary-light hover:bg-[#B54300] transition-all duration-300">
+                Submit
+              </button>
+            </form>
+          </div>
+
+          <div class="w-full md:w-1/2 flex flex-col items-start">
+            <p class="mb-4 text-lg font-semibold">
+              For questions, technical assistance, or more information, you
+              can reach us at:
+            </p>
+            <ul class="space-y-3">
+              <li class="flex items-center justify-start">
+                <a href="tel:+15551234567"
+                  class="flex items-center no-underline text-black hover:text-[#D35400] transition-colors duration-200 ease-in-out">
+                  <ion-icon name="call" class="mr-2 text-lg"></ion-icon>
+                  +1 (555) 123-4567
+                </a>
+              </li>
+              <li class="flex items-center justify-start">
+                <a href="mailto:support@example.com"
+                  class="flex items-center no-underline text-black hover:text-[#D35400] transition-colors duration-200 ease-in-out">
+                  <ion-icon name="mail" class="mr-2 text-lg"></ion-icon>
+                  support@example.com
+                </a>
+              </li>
+              <li class="flex items-center justify-start">
+                <a href="#"
+                  class="flex items-center no-underline text-black hover:text-[#D35400] transition-colors duration-200 ease-in-out">
+                  <ion-icon name="location" class="mr-2 text-lg"></ion-icon>
+                  1234 Example St, City, Country
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-[#ffffff] md:px-10 px-5 py-10 flex md:flex-row flex-col items-center justify-between">
+      <img src="src/Assets/Img/subscribe.jpg" alt="agrixpo" class="w-[100px] object-cover md:block hidden" />
+      <div class="flex md:flex-row flex-col items-start md:items-center justify-between gap-10">
+        <div class="flex flex-col gap-2 items-start justify-center">
+          <h3 class="text-lg font-semibold">New to <span class="text-primary">Agrixpo</span> </h3>
+          <p class="font-normal text-sm">Subscribe to our newsletter to get updates on our latest offers!</p>
+          <div>
+            <input type="email" placeholder="Enter your email"
+              class="border-primary-light border-2 rounded-md p-2 w-[200px] md:w-[300px]" />
+            <button class="bg-primary-light text-white px-4 py-2 rounded-md">Subscribe</button>
+          </div>
+
+        </div>
+        <div>
+          <p class="font-semibold">By subscribing, you agree to our <br><a href="#" class="text-primary-light">Privacy
+              Policy</a></p>
+        </div>
+      </div>
+
+    </section>
 
   </main>
   <footer class="bg-black text-white py-[40px] md:px-[100px] px-[30px] relative">
@@ -283,8 +414,6 @@
     </div>
   </footer>
 
-
   <script src="src/scripts/index.js"></script>
 </body>
-
 </html>
