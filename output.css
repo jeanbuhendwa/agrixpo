@@ -3527,6 +3527,10 @@ html {
     padding-top: 70px;
   }
 
+  .md\:text-justify {
+    text-align: justify;
+  }
+
   .md\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
