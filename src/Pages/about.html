@@ -1,205 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=\, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=\, initial-scale=1.0" />
 
-    <!-- The below link to the external css file -->
-    <link rel="stylesheet" type="text/css" href="../../styles.css" />
-    <link href="../../output.css" rel="stylesheet" />
+  <!-- The below link to the external css file -->
+  <link rel="stylesheet" type="text/css" href="../../styles.css" />
+  <link href="../../output.css" rel="stylesheet" />
 
-    <!-- Importing Icon -->
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
+  <!-- Importing Icon -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
-    <!-- The below is the favicon -->
-    <link rel="icon" type="image/jpg" href="../../src/Assets/favIcon.jpg" />
+  <!-- The below is the favicon -->
+  <link rel="icon" type="image/jpg" href="../Assets/favIcon.jpg" />
 
-    <!-- The below is the title -->
-    <title>AGRIXPO | About</title>
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+
+  <!-- The below is the title -->
+  <title>AGRIXPO | About</title>
 </head>
+
 <body>
-    <header class="bg-primary-light fixed w-full h-100 z-50 shadow-md">
-        <nav
-          class="flex items-center justify-between w-[95%] md:w-[90%] mx-auto px-[20px] py-[10px] relative"
-        >
-          <div>
-            <a href="../../index.html" class="flex items-center gap-1">
-              <img src="../../src/Assets/logo.jpg" alt="logo" class="w-9" />
-              <div class="flex flex-col items-start">
-                <span class="font-black text-xl"
-                  >AGRI<span class="text-white">XPO</span></span
-                >
-                <span class="text-xs text-white mt-[-5px] font-semibold"
-                  >By Foroden</span
-                >
-              </div>
-            </a>
+  <header class="bg-primary-light fixed top-0 left-0 w-full z-50 shadow-md">
+    <nav class="w-[100%] md:w-[95%] mx-auto px-3 py-2 relative">
+      <div class="flex justify-between items-center">
+        <!-- Logo and Menu Icon for mobile -->
+        <div class="flex items-center gap-3">
+          <ion-icon onclick="onToggleMenu(this)" name="menu-outline"
+            class="cursor-pointer w-8 h-8 bg-primary-light p-[5px] rounded-sm md:hidden"></ion-icon>
+          <a href="../../index.html" class="flex items-center gap-1">
+            <img src="../Assets/logo.jpg" alt="logo" class="w-9" />
+            <div class="flex flex-col items-start">
+              <span class="font-black text-xl">AGRI<span class="text-white">XPO</span></span>
+              <span class="text-xs text-white mt-[-5px] font-semibold">By Foroden</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Account and cart section -->
+        <div class="flex items-center gap-4 justify-center relative">
+          <div class="flex items-center justify-center gap-2 cursor-pointer">
+            <ion-icon name="help-circle-outline" class="text-4xl md:text-3xl font-extrabold"></ion-icon>
+            <span class=" font-semibold hidden md:block">Help</span>
           </div>
-          <div class="flex justify-between items-center gap-x-[50px]">
-            <div
-              class="nav-links md:static bg-primary-light fixed md:min-h-fit min-h-[80vh] left-0 top-[-100%] w-full md:w-auto flex flex-col md:flex-row items-center md:justify-center md:p-[5px] justify-start p-[100px] md:gap-[2vw] gap-4 font-bold md:font-medium z-50 transition-all duration-300"
-            >
-              <ul
-                class="flex md:flex-row text-xl md:text-base flex-col md:items-center md:gap-[2vw] gap-[15px] font-bold md:font-medium uppercase"
-              >
-                <li>
-                  <a
-                    href="../../index.html"
-                    class="md:font-bold text-black hover:text-white transition-all duration-[0.3s]"
-                    >Home</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href=""
-                    class="md:font-bold text-white  transition-all duration-[0.3s]"
-                    >About</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="./products.html"
-                    class="md:font-bold text-black hover:text-white transition-all duration-[0.3s]"
-                    >Products</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="./contact.html"
-                    class="md:font-bold text-black hover:text-white transition-all duration-[0.3s]"
-                    >Contact Us</a
-                  >
-                </li>
-              </ul>
+        </div>
+      </div>
+
+      <!-- Mobile Menu (hidden by default, will show when menu icon is clicked) -->
+      <div
+        class="nav-links hidden absolute bg-primary-light w-full h-[100vh] left-0 top-full p-4 flex-col gap-4 font-bold z-50 transition-all duration-300 md:hidden">
+        <ul class="flex flex-col text-base items-start p-5 gap-5 font-medium uppercase">
+          <a href="../../index.html"
+            class="flex items-center justify-center gap-2 text-black font-bold hover:text-white transition-all duration-300">
+            <ion-icon name="home"></ion-icon>
+            <span>Home</a>
+          </a>
+          <a href="" class="flex items-center justify-center gap-2 text-white font-bold">
+            <ion-icon name="ellipsis-vertical"></ion-icon>
+            <span>About Us</span>
+          </a>
+          <a href="#"
+            class="flex items-center justify-center gap-2 text-black font-bold hover:text-white transition-all duration-300">
+            <ion-icon name="apps"></ion-icon>
+            <span>Products</span>
+          </a>
+          <a href="../../index.html#contact-us"
+            class="flex items-center justify-center gap-2 text-black font-bold hover:text-white transition-all duration-300">
+            <ion-icon name="call-outline"></ion-icon>
+            <span>Contact Us</span>
+          </a>
+          <a href=""
+            class="flex items-center justify-center gap-2 text-black font-bold hover:text-white transition-all duration-300">
+            <ion-icon name="clipboard-outline"></ion-icon>
+            <span>Blog</span>
+          </a>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main class="pt-[0px] pb-5 mt-[50px] bg-[#ffe2c3] md:px-[0px] px-[30px]">
+    <section class="grid_about">
+      <article class="bg-black md:block hidden">
+        <ul
+          class="flex md:flex-col text-base md:text-base flex-col md:items-start px-5 py-10 md:gap-2 md:font-medium uppercase">
+          <a href="../../index.html" class="flex items-center justify-center gap-2 text-white font-normal hover:text-primary-light transition-all duration-300">
+            <ion-icon name="home"></ion-icon>
+            <span>Home</a>
+          </a>
+          <a href=""
+            class="flex items-center justify-center gap-2 text-primary-light">
+            <ion-icon name="ellipsis-vertical"></ion-icon>
+            <span>About Us</span>
+          </a>
+          <a href="../../index.html#products"
+            class="flex items-center justify-center gap-2 text-white font-normal hover:text-primary-light transition-all duration-300">
+            <ion-icon name="apps"></ion-icon>
+            <span>Products</span>
+          </a>
+          
+          <a href="#contact"
+            class="flex items-center justify-center gap-2 text-white font-normal hover:text-primary-light transition-all duration-300">
+            <ion-icon name="call-outline"></ion-icon>
+            <span>Contact Us</span>
+          </a>
+          <a href=""
+            class="flex items-center justify-center gap-2 text-white font-normal hover:text-primary-light transition-all duration-300">
+            <ion-icon name="clipboard-outline"></ion-icon>
+            <span>Blog</span>
+          </a>
+        </ul>
+      </article>
+
+      <article class="pt-5 pb-0">
+        <h2 class="text-primary-dark font-title text-4xl font-bold py-10 text-center">About Us</h2>
+        <section class="flex flex-col items-center justify-center gap-5">
+            <div class="md:order-none col-span-2">
+              <p class="font-body text-lg text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Maxime totam praesentium molestias minus odio quam consequatur dolorem culpa numquam quaerat, iusto
+                repudiandae incidunt reprehenderit, non rem laborum assumenda enim. Atque? Lorem ipsum, dolor sit amet
+                consectetur adipisicing elit. Commodi quos, voluptas at expedita consequuntur quia harum recusandae
+                quidem corrupti cupiditate minima reiciendis autem earum laudantium? Id a eum facere ipsum! </p>
             </div>
-            <div class="flex items-center gap-[10px]">
-              <div class="flex items-center justify-center gap-3">
-                <ion-icon class="text-2xl" name="chatbubbles"></ion-icon>
-                <ion-icon class="text-2xl" name="notifications"></ion-icon>
-              </div>
-              <ion-icon
-                onclick="onToggleMenu(this)"
-                class="md:hidden cursor-pointer w-8 h-8 bg-primary-light p-[5px] rounded-sm transition-all duration-300"
-                name="menu-outline"
-              ></ion-icon>
+
+          <div class="grid_about_content ">
+            <div>
+              <img src="../Assets/Img/about.jpg" alt="about" class="h-full w-full rounded-md shadow-md object-cover" />
             </div>
+            <div>
+              <p class="font-body text-lg text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Maxime totam praesentium molestias minus odio quam consequatur dolorem culpa numquam quaerat, iusto
+                repudiandae incidunt reprehenderit, non rem laborum assumenda enim. Atque? Lorem ipsum, dolor sit amet
+                consectetur adipisicing elit. Commodi quos, voluptas at expedita consequuntur quia harum recusandae
+                quidem corrupti cupiditate minima reiciendis autem earum laudantium? Id a eum facere ipsum! Lorem ipsum
+                dolor sit amet consectetur adipisicing elit. Officiis mollitia, officia laudantium atque esse, molestiae
+                accusamus voluptatem repudiandae sed tempore minus nihil, totam iusto! Quisquam dolores error cupiditate
+                officiis vitae. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur velit eius, culpa
+                placeat corporis, excepturi reprehenderit similique libero et eligendi nam facilis nemo reiciendis
+                autem, nisi repellendus aliquid incidunt ratione.</p>
+            </div>
+
           </div>
-        </nav>
-      </header>
-      <main class="py-[100px] bg-[#ffe2c3] md:px-[100px] px-[30px]">
-        <h2 class="text-primary-dark font-title text-5xl font-bold py-10 text-center">About Us</h2>
-        <section class="flex flex-col items-center justify-center gap-10">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div class="md:order-none">
-                    <p class="font-body text-base text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime totam praesentium molestias minus odio quam consequatur dolorem culpa numquam quaerat, iusto repudiandae incidunt reprehenderit, non rem laborum assumenda enim. Atque? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi quos, voluptas at expedita consequuntur quia harum recusandae quidem corrupti cupiditate minima reiciendis autem earum laudantium? Id a eum facere ipsum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis mollitia, officia laudantium atque esse, molestiae accusamus voluptatem repudiandae sed tempore minus nihil, totam iusto! Quisquam dolores error cupiditate officiis vitae. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur velit eius, culpa placeat corporis, excepturi reprehenderit similique libero et eligendi nam facilis nemo reiciendis autem, nisi repellendus aliquid incidunt ratione.</p>
-                </div>
-                <div class="order-first md:order-none">
-                    <img src="../Assets/Img/about.jpg" alt="about" class="h-full w-full object-cover" />
-                </div>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                    <img src="../Assets/Img/about.jpg" alt="about" class="h-full w-full object-cover" />
-                </div>
-                <div>
-                    <p class="font-body text-base text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime totam praesentium molestias minus odio quam consequatur dolorem culpa numquam quaerat, iusto repudiandae incidunt reprehenderit, non rem laborum assumenda enim. Atque? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi quos, voluptas at expedita consequuntur quia harum recusandae quidem corrupti cupiditate minima reiciendis autem earum laudantium? Id a eum facere ipsum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis mollitia, officia laudantium atque esse, molestiae accusamus voluptatem repudiandae sed tempore minus nihil, totam iusto! Quisquam dolores error cupiditate officiis vitae. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur velit eius, culpa placeat corporis, excepturi reprehenderit similique libero et eligendi nam facilis nemo reiciendis autem, nisi repellendus aliquid incidunt ratione.</p>
-                </div>
-                
-            </div>
         </section>
-      </main>
-      <footer
-      class="bg-black text-white py-[40px] md:px-[100px] px-[30px] relative"
-    >
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-[30px]">
-        <div>
-          <h3 class="text-2xl font-bold text-primary-light">AGRIXPO</h3>
-          <p class="text-gray-400 mt-[10px]">
-            Discover fresh local farm products with AGRIXPO. Our platform
-            connects you directly to local farmers, ensuring you get the best
-            quality products while supporting local economies.
-          </p>
-        </div>
-        <div>
-          <h3 class="text-xl font-bold">Quick Links</h3>
-          <ul class="mt-[10px]">
-            <li>
-              <a
-                href=""
-                class="hover:text-orange-500 transition-all duration-[0.3s]"
-                >Home</a
-              >
-            </li>
-            <li>
-              <a
-                href=""
-                class="hover:text-orange-500 transition-all duration-[0.3s]"
-                >About</a
-              >
-            </li>
-            <li>
-              <a
-                href=""
-                class="hover:text-orange-500 transition-all duration-[0.3s]"
-                >Products</a
-              >
-            </li>
-            <li>
-              <a
-                href=""
-                class="hover:text-orange-500 transition-all duration-[0.3s]"
-                >Contact</a
-              >
-            </li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="text-xl font-bold">Contact</h3>
-          <p class="mt-[10px]">+000 000 000 000</p>
-          <p>123, ABC Street, XYZ City, Country, Pincode</p>
-        </div>
-        <div>
-          <h3 class="text-xl font-bold">Social Media</h3>
-          <div class="flex items-center gap-[10px] mt-[10px] mb-10">
-            <a
-              href="https://www.facebook.com"
-              class="text-2xl hover:text-orange-500"
-              ><ion-icon name="logo-facebook"></ion-icon
-            ></a>
-            <a
-              href="https://www.instagram.com"
-              class="text-2xl hover:text-orange-500"
-              ><ion-icon name="logo-instagram"></ion-icon
-            ></a>
-            <a
-              href="https://www.twitter.com"
-              class="text-2xl hover:text-orange-500"
-              ><ion-icon name="logo-twitter"></ion-icon
-            ></a>
-            <a
-              href="https://www.linkedin.com"
-              class="text-2xl hover:text-orange-500"
-              ><ion-icon name="logo-linkedin"></ion-icon
-            ></a>
-          </div>
+      </article>
+    </section>
+
+  </main>
+  <footer class="bg-black text-white py-[40px] md:px-[100px] px-[30px] relative">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-[30px]">
+      <div>
+        <h3 class="text-xl font-bold">Quick Links</h3>
+        <ul class="mt-[10px]">
+          <li>
+            <a href="../../index.html" class="hover:text-orange-500 transition-all duration-[0.3s]">Home</a>
+          </li>
+          <li>
+            <a href="" class="hover:text-orange-500 transition-all duration-[0.3s]">About</a>
+          </li>
+          <li>
+            <a href="../../index.html#products"
+              class="hover:text-orange-500 transition-all duration-[0.3s]">Products</a>
+          </li>
+          <li>
+            <a href="../../index.html#contact" class="hover:text-orange-500 transition-all duration-[0.3s]">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-xl font-bold">Contact</h3>
+        <p class="mt-[10px]">+000 000 000 000</p>
+        <p>123, ABC Street, XYZ City, Country, Pincode</p>
+      </div>
+      <div>
+        <h3 class="text-xl font-bold">Social Media</h3>
+        <div class="flex items-center gap-[10px] mt-[10px] mb-10">
+          <a href="https://www.facebook.com" class="text-2xl hover:text-orange-500"><ion-icon
+              name="logo-facebook"></ion-icon></a>
+          <a href="https://www.instagram.com" class="text-2xl hover:text-orange-500"><ion-icon
+              name="logo-instagram"></ion-icon></a>
+          <a href="https://www.twitter.com" class="text-2xl hover:text-orange-500"><ion-icon
+              name="logo-twitter"></ion-icon></a>
+          <a href="https://www.linkedin.com" class="text-2xl hover:text-orange-500"><ion-icon
+              name="logo-linkedin"></ion-icon></a>
         </div>
       </div>
-      <div class="absolute bottom-0 md:right-20 pb-[20px] pr-[20px]">
-        <a
-          href="src/Pages/admin-login.html"
-          class="bg-primary-light hover:bg-orange-600 text-white font-semibold text-[16px] py-1 px-2 rounded transition duration-300 ease-in-out"
-        >
-          Admin Login
-        </a>
-      </div>
-    </footer>
-    <script src="../scripts/index.js"></script>
+    </div>
+    <div class="absolute bottom-0 md:right-20 pb-[20px] pr-[20px]">
+      <a href="src/Pages/admin-login.html"
+        class="bg-primary-light hover:bg-orange-600 text-white font-semibold text-[16px] py-1 px-2 rounded transition duration-300 ease-in-out">
+        Admin Login
+      </a>
+    </div>
+  </footer>
+  <script src="../scripts/index.js"></script>
 </body>
+
 </html>

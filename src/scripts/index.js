@@ -145,3 +145,74 @@ window.addEventListener("DOMContentLoaded", (event) => {
     showMoreBtn.classList.add("hidden");
   });
 });
+
+const farmProducts = [
+  { name: "Apples", image: "https://source.unsplash.com/featured/?apples" },
+  { name: "Milk", image: "https://source.unsplash.com/featured/?milk" },
+  { name: "Eggs", image: "https://source.unsplash.com/featured/?eggs" },
+  { name: "Carrots", image: "https://source.unsplash.com/featured/?carrots" },
+  { name: "Potatoes", image: "https://source.unsplash.com/featured/?potatoes" },
+];
+
+document.addEventListener("DOMContentLoaded", () => {
+  const productsContainer = document.getElementById(
+    "recentlyUpdatedFarmProducts"
+  );
+  productsContainer.className =
+    "grid grid-cols-1 md:grid-cols-5 gap-4 md:mx-10 mx-5";
+
+  farmProducts.forEach((product) => {
+    const productCard = document.createElement("div");
+    productCard.className = "relative group cursor-pointer";
+
+    productCard.innerHTML = `
+      <img src="${product.image}" alt="${product.name}" class="w-full h-[250px] object-cover group-hover:opacity-25 transition-opacity duration-300">
+      <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <span class="text-xl font-bold">${product.name}</span>
+      </div>
+    `;
+
+    productsContainer.appendChild(productCard);
+  });
+});
+
+// Function for the feature premium sellers
+const premiumProducts = [
+  {
+    name: "Premium Apples",
+    image: "https://source.unsplash.com/featured/?apples",
+  },
+  { name: "Organic Milk", image: "https://source.unsplash.com/featured/?milk" },
+  {
+    name: "Free-range Eggs",
+    image: "https://source.unsplash.com/featured/?eggs",
+  },
+  {
+    name: "Heirloom Carrots",
+    image: "https://source.unsplash.com/featured/?carrots",
+  },
+  {
+    name: "Sweet Potatoes",
+    image: "https://source.unsplash.com/featured/?potatoes",
+  },
+];
+
+document.addEventListener("DOMContentLoaded", () => {
+  const premiumContainer = document.getElementById("premiumSellerProducts");
+  premiumContainer.className =
+    "grid grid-cols-1 md:grid-cols-5 gap-4 md:mx-10 mx-5";
+
+  premiumProducts.forEach((product) => {
+    const productCard = document.createElement("div");
+    productCard.className = "relative group cursor-pointer bg-black";
+
+    productCard.innerHTML = `
+      <img src="${product.image}" alt="${product.name}" class="w-full h-[250px] object-cover group-hover:opacity-25 transition-opacity duration-300">
+      <div class="absolute inset-0 flex items-center justify-center text-white opacity-100 transition-opacity duration-300 bg-black bg-opacity-50">
+        <span class="text-xl font-bold">${product.name}</span>
+      </div>
+    `;
+
+    premiumContainer.appendChild(productCard);
+  });
+});
