@@ -29,46 +29,31 @@
 
 <body>
   <header class="bg-primary-light fixed top-0 left-0 w-full z-50 shadow-md">
-    <nav class="w-[100%] md:w-[95%] mx-auto px-4 py-2 relative">
+    <nav class="w-[100%] md:w-[95%] mx-auto px-4 py-4 relative">
       <div class="flex justify-between items-center">
         <!-- Logo and Menu Icon for mobile -->
         <div class="flex items-center gap-3">
           <ion-icon onclick="onToggleMenu(this)" name="menu-outline"
             class="cursor-pointer w-8 h-8 bg-primary-light p-[5px] rounded-sm md:hidden"></ion-icon>
           <a href="#" class="flex items-center gap-1">
-            <img src="src/Assets/logo.jpg" alt="logo" class="w-9" />
             <div class="flex flex-col items-start">
               <span class="font-black text-xl">AGRI<span class="text-white">XPO</span></span>
-              <span class="text-xs text-white mt-[-5px] font-semibold">By Foroden</span>
             </div>
           </a>
         </div>
 
         <!-- Account and cart section -->
         <div class="flex items-center gap-4 justify-center relative">
-          <div class="relative">
-            <button id="dropdownButton"
-              class="flex items-center justify-center gap-2 cursor-pointer border-none bg-none">
-              <ion-icon name="person" class="text-xl"></ion-icon>
-              <span class="text-base font-semibold hidden md:block">Account</span>
-            </button>
-            <div id="dropdownMenu"
-              class="hidden absolute bg-white shadow-md md:mt-4 mt-[70px] w-[200px] rounded overflow-hidden z-50 right-[-50px] md:right-0 md:mr-0 p-2">
-              <a href="./src/Pages/profileUser.html"
-                class="block px-4 py-2 text-gray-700 font-semibold text-base hover:bg-gray-100">My Account</a>
-              <a href="#" class="block px-4 py-2 text-gray-700 font-semibold text-base hover:bg-gray-100">Orders</a>
-            </div>
-          </div>
-          <div class="hidden md:flex items-center justify-center gap-2 cursor-pointer">
-            <ion-icon name="help-circle-outline" class="text-2xl font-extrabold"></ion-icon>
-            <span class=" font-semibold">Help</span>
+          <div class="flex items-center justify-center gap-1 cursor-pointer">
+            <ion-icon name="help-circle-outline" class="text-3xl md:text-2xl font-extrabold"></ion-icon>
+            <span class=" font-bold hidden md:block">Help</span>
           </div>
 
         </div>
       </div>
 
       <!-- Search Bar -->
-      <div class="md:absolute md:mt-0 mt-2 top-[12px] md:w-[80%] w-full">
+      <div class="md:absolute md:mt-0 mt-3 top-[12px] md:w-[80%] w-full">
         <div class="flex items-center bg-white rounded-md shadow-md shadow-black-400 md:w-[60%] mx-auto">
           <ion-icon name="search-outline" class="w-8"></ion-icon>
           <input type="text" placeholder="Search for fruits, vegetables, and more"
@@ -124,7 +109,7 @@
     </nav>
   </header>
 
-  <main class="md:pt-[70px] pt-[110px] bg-[#ffe2c3]">
+  <main class="md:pt-[80px] pt-[130px] bg-[#ffe2c3]">
     <section class="grid_container md:px-[30px] px-1 h-[60vh] md:h-[75vh] mb-[30px]">
       <section class="bg-black md:block hidden">
         <ul
