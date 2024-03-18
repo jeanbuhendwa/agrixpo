@@ -40,26 +40,6 @@ const swiper = new Swiper(".mySwiper", {
   },
 });
 
-// Function for the login menu
-const roleButtons = document.querySelectorAll(".role-btn");
-roleButtons.forEach((button) => {
-  button.addEventListener("click", function () {
-    const role = this.getAttribute("data-role");
-    document.getElementById("loginTitle").innerText = `${role} Login`;
-    document.getElementById("loginForm").classList.remove("hidden");
-
-    roleButtons.forEach((btn) => {
-      if (btn === this) {
-        btn.classList.add("bg-primary-light", "text-white");
-        btn.classList.remove("bg-white", "text-[#384E46]");
-      } else {
-        btn.classList.remove("bg-orange-500", "text-white");
-        btn.classList.add("bg-white", "text-[#384E46]");
-      }
-    });
-  });
-});
-
 // Function for the categories
 const categories = [
   {
@@ -214,5 +194,45 @@ document.addEventListener("DOMContentLoaded", () => {
     `;
 
     premiumContainer.appendChild(productCard);
+  });
+});
+
+// Function for the profile page
+document.addEventListener("DOMContentLoaded", () => {
+  const menuToggle = document.getElementById("menuToggle");
+  const menu = document.getElementById("menu");
+  const menuItems = document.querySelectorAll(".menu-item");
+  const details = document.getElementById("details");
+
+  // Toggle mobile menu
+  menuToggle.addEventListener("click", () => {
+    menu.classList.toggle("hidden");
+  });
+
+  // Content for each menu item
+  const content = {
+    overview:
+      '<h1 class="text-xl font-bold">Account Overview</h1><div class="max-w-4xl mx-auto p-5"><div class="grid grid-cols-1 md:grid-cols-2 gap-4"><div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200"><h2 class="text-lg font-semibold mb-4">Account Details</h2><p class="text-gray-700">Joe Doe <br> joedoe@gmail.com</p></div><div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200"><h2 class="text-lg font-semibold mb-4">Address Book</h2><p class="text-gray-700">123, ABC Street, XYZ City, Country,<br> Pincode</p></div><div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200"><h2 class="text-lg font-semibold mb-4">Agrix Credit</h2><p class="text-gray-700"> AgrixPo credit balance.</p></div><div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200"><h2 class="text-lg font-semibold mb-4">Newsletter Preferences</h2><p class="text-gray-700">You are currently not subscribed to any of our newsletters.</p></div></div></div>',
+    messages:
+      '<h1 class="text-xl font-bold">Messages</h1><p>Your messages...</p>',
+    orders: '<h1 class="text-xl font-bold">Orders</h1><p>Your orders...</p>',
+    saved:
+      '<h1 class="text-xl font-bold">Saved Items</h1><p>Your saved items...</p>',
+    settings:
+      '<h1 class="text-xl font-bold">Settings</h1><p>Your account settings...</p>',
+  };
+
+  menuItems.forEach((item) => {
+    item.addEventListener("click", function () {
+      if (!menu.classList.contains("hidden")) {
+        menu.classList.add("hidden");
+      }
+
+      menuItems.forEach((i) => i.classList.remove("bg-gray-700"));
+      this.classList.add("bg-gray-700");
+
+      const target = item.getAttribute("data-target");
+      details.innerHTML = content[target];
+    });
   });
 });

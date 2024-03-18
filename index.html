@@ -29,7 +29,7 @@
 
 <body>
   <header class="bg-primary-light fixed top-0 left-0 w-full z-50 shadow-md">
-    <nav class="w-[100%] md:w-[95%] mx-auto px-3 py-2 relative">
+    <nav class="w-[100%] md:w-[95%] mx-auto px-4 py-2 relative">
       <div class="flex justify-between items-center">
         <!-- Logo and Menu Icon for mobile -->
         <div class="flex items-center gap-3">
@@ -54,11 +54,9 @@
             </button>
             <div id="dropdownMenu"
               class="hidden absolute bg-white shadow-md md:mt-4 mt-[70px] w-[200px] rounded overflow-hidden z-50 right-[-50px] md:right-0 md:mr-0 p-2">
-              <a href="#" class="block px-4 py-2 text-gray-700 font-semibold text-base hover:bg-gray-100">My Account</a>
+              <a href="./src/Pages/profileUser.html"
+                class="block px-4 py-2 text-gray-700 font-semibold text-base hover:bg-gray-100">My Account</a>
               <a href="#" class="block px-4 py-2 text-gray-700 font-semibold text-base hover:bg-gray-100">Orders</a>
-              <a href="#"
-                class="block px-4 py-2 font-semibold text-base bg-primary-dark rounded-sm text-white hover:bg-primary-light transition-all duration-300">Sign
-                In</a>
             </div>
           </div>
           <div class="hidden md:flex items-center justify-center gap-2 cursor-pointer">
@@ -66,10 +64,6 @@
             <span class=" font-semibold">Help</span>
           </div>
 
-          <div class="flex items-center justify-center gap-2 cursor-pointer">
-            <ion-icon name="cart" class="text-2xl"></ion-icon>
-            <span class="hidden md:block font-semibold">Cart</span>
-          </div>
         </div>
       </div>
 
@@ -85,7 +79,7 @@
 
       <!-- Mobile Menu (hidden by default, will show when menu icon is clicked) -->
       <div
-        class="nav-links hidden absolute bg-primary-light w-full h-[100vh] left-0 top-full p-4 flex-col gap-4 font-bold z-50 transition-all duration-300 md:hidden">
+        class="nav-links hidden absolute bg-primary-light w-full h-[60vh] left-0 top-full p-4 flex-col gap-4 font-bold z-50 transition-all duration-300 md:hidden">
         <ul class="flex flex-col text-base items-start p-5 gap-5 font-medium uppercase">
           <a href="" class="flex items-center justify-center gap-2 text-white font-bold">
             <ion-icon name="home"></ion-icon>
@@ -111,7 +105,21 @@
             <ion-icon name="clipboard-outline"></ion-icon>
             <span>Blog</span>
           </a>
+          <div class="flex items-center justify-center gap-5 mt-5">
+            <a href="./register.html"
+              class="flex items-center justify-center gap-2 text-white bg-primary-dark px-5 py-2 font-bold hover:bg-primary transition-all duration-300">
+              <ion-icon name="person-add-outline"></ion-icon>
+              <span>Register</span>
+            </a>
+            <a href="./login.html"
+              class="flex items-center justify-center gap-2 text-white bg-primary-dark px-5 py-2 font-bold hover:bg-primary transition-all duration-300">
+              <ion-icon name="log-in-outline"></ion-icon>
+              <span>Sign In</span>
+            </a>
+          </div>
+
         </ul>
+
       </div>
     </nav>
   </header>
@@ -145,6 +153,19 @@
             <ion-icon name="clipboard-outline"></ion-icon>
             <span>Blog</span>
           </a>
+          <div class="flex flex-col gap-2 mt-5">
+            <a href="./register.html"
+              class="flex items-center justify-start gap-2 text-white bg-primary-dark px-5 py-2 font-semibold text-base hover:bg-primary transition-all duration-300">
+              <ion-icon name="person-add-outline"></ion-icon>
+              <span>Register</span>
+            </a>
+            <a href="./login.html"
+              class="flex items-center justify-center gap-2 text-white bg-primary-dark px-5 py-2 font-semibold text-base hover:bg-primary transition-all duration-300">
+              <ion-icon name="log-in-outline"></ion-icon>
+              <span>Sign In</span>
+            </a>
+          </div>
+
         </ul>
       </section>
       <section class="relative w-full h-auto md:h-auto flex items-center justify-center overflow-hidden">
@@ -238,7 +259,7 @@
       <div id="premiumSellerProducts" class="container mx-auto mt-8">
         <!-- Premium products will be injected here -->
       </div>
-      
+
     </section>
 
     <section id="contact">
@@ -353,8 +374,7 @@
             <a href="./src/Pages/about.html" class="hover:text-orange-500 transition-all duration-[0.3s]">About</a>
           </li>
           <li>
-            <a href="#products"
-              class="hover:text-orange-500 transition-all duration-[0.3s]">Products</a>
+            <a href="#products" class="hover:text-orange-500 transition-all duration-[0.3s]">Products</a>
           </li>
           <li>
             <a href="" class="hover:text-orange-500 transition-all duration-[0.3s]">Contact</a>
