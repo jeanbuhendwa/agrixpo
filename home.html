@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=\, initial-scale=1.0" />
+
+  <!-- The below link to the external css file -->
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+  <link href="./output.css" rel="stylesheet" />
+
+  <!-- Importing Icon -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+  <!-- The below is the favicon -->
+  <link rel="icon" type="image/jpg" href="src/Assets/favIcon.jpg" />
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+
+  <!-- The below is the title -->
+  <title>AGRIXPO | HOME</title>
+</head>
+
+<body>
+  <header class="bg-primary-light fixed top-0 left-0 w-full z-50 shadow-md">
+    <nav class="w-[100%] md:w-[95%] mx-auto px-4 py-4 relative">
+      <div class="flex justify-between items-center">
+        <!-- Logo and Menu Icon for mobile -->
+        <div class="flex items-center gap-3">
+          <ion-icon onclick="onToggleMenu(this)" name="menu-outline"
+            class="cursor-pointer w-8 h-8 bg-primary-light p-[5px] rounded-sm md:hidden"></ion-icon>
+          <a href="./home.html" class="flex items-center gap-1">
+            <div class="flex flex-col items-start">
+              <span class="text-black text-2xl font-bold">AGRI<span class="text-white">XPO</span></span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Account section -->
+        <div class="flex items-center gap-4 justify-center relative">
+          <div class="relative">
+            <button id="dropdownButton"
+              class="flex items-center justify-center gap-2 cursor-pointer border-none bg-none">
+              <ion-icon name="person" class="text-xl"></ion-icon>
+              <span class="text-base font-semibold hidden md:block">Account</span>
+            </button>
+            <div id="dropdownMenu"
+              class="hidden absolute bg-white shadow-md md:mt-4 mt-[70px] w-[200px] rounded overflow-hidden z-50 right-[-50px] md:right-0 md:mr-0 p-2">
+              <a href="./src/Pages/profileUser.html"
+                class="block px-4 py-2 text-gray-700 font-semibold text-base hover:bg-gray-100">My Account</a>
+              <a href="#" class="block px-4 py-2 text-gray-700 font-semibold text-base hover:bg-gray-100">Orders</a>
+            </div>
+          </div>
+          <div class="hidden md:flex items-center justify-center gap-2 cursor-pointer">
+            <ion-icon name="help-circle-outline" class="text-2xl font-extrabold"></ion-icon>
+            <span class=" font-semibold">Help</span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Search Bar -->
+      <div class="md:absolute md:mt-0 mt-2 top-[12px] md:w-[80%] w-full">
+        <div class="flex items-center bg-white rounded-md shadow-md shadow-black-400 md:w-[60%] mx-auto">
+          <ion-icon name="search-outline" class="w-8"></ion-icon>
+          <input type="text" placeholder="What are you looking for ?"
+            class="w-full focus:outline-none placeholder:text-primary-light placeholder:text-[16px] font-semibold text-sm" />
+          <button class="bg-primary-dark text-white px-4 py-2 rounded-r-md text-[14px] font-semibold">Search</button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu (hidden by default, will show when menu icon is clicked) -->
+      <div
+        class="nav-links hidden absolute bg-primary-light w-full h-[60vh] left-0 top-full p-4 flex-col gap-4 font-bold z-50 transition-all duration-300 md:hidden">
+        <ul class="flex flex-col text-base items-start p-5 gap-5 font-medium uppercase">
+          <a href="" class="flex items-center justify-center gap-2 text-white font-bold">
+            <ion-icon name="home"></ion-icon>
+            <span>Home</a>
+          </a>
+          <a href="./src/Pages/about.html"
+            class="flex items-center justify-center gap-2 text-black font-bold hover:text-white transition-all duration-300">
+            <ion-icon name="ellipsis-vertical"></ion-icon>
+            <span>About Us</span>
+          </a>
+          <a href=""
+            class="list-items flex items-center justify-center gap-2 text-black font-bold hover:text-white transition-all duration-300">
+            <ion-icon name="apps"></ion-icon>
+            <span>Products</span>
+          </a>
+          <a href=""
+            class="flex items-center justify-center gap-2 text-black font-bold hover:text-white transition-all duration-300">
+            <ion-icon name="call-outline"></ion-icon>
+            <span>Contact Us</span>
+          </a>
+          <a href=""
+            class="flex items-center justify-center gap-2 text-black font-bold hover:text-white transition-all duration-300">
+            <ion-icon name="clipboard-outline"></ion-icon>
+            <span>Blog</span>
+          </a>
+
+        </ul>
+
+      </div>
+    </nav>
+  </header>
+
+  <main class="md:pt-[80px] pt-[110px] bg-[#ffe2c3]">
+    <section class="grid_container md:px-[30px] px-1 h-[60vh] md:h-[75vh] mb-[30px]">
+      <section class="bg-black md:block hidden">
+        <ul
+          class="flex md:flex-col text-base md:text-base flex-col md:items-start px-5 py-10 md:gap-2 md:font-medium uppercase">
+          <a href="./home.html" class="flex items-center justify-center gap-2 text-primary-light font-normal">
+            <ion-icon name="home"></ion-icon>
+            <span>Home</a>
+          </a>
+          <a href="./src/Pages/about.html"
+            class="flex items-center justify-center gap-2 text-white font-normal hover:text-primary-light transition-all duration-300">
+            <ion-icon name="ellipsis-vertical"></ion-icon>
+            <span>About Us</span>
+          </a>
+          <a href="#products"
+            class="flex items-center justify-center gap-2 text-white font-normal hover:text-primary-light transition-all duration-300">
+            <ion-icon name="apps"></ion-icon>
+            <span>Products</span>
+          </a>
+          <a href="#contact"
+            class="flex items-center justify-center gap-2 text-white font-normal hover:text-primary-light transition-all duration-300">
+            <ion-icon name="call-outline"></ion-icon>
+            <span>Contact Us</span>
+          </a>
+          <a href=""
+            class="flex items-center justify-center gap-2 text-white font-normal hover:text-primary-light transition-all duration-300">
+            <ion-icon name="clipboard-outline"></ion-icon>
+            <span>Blog</span>
+        </a>
+
+        </ul>
+      </section>
+      <section class="relative w-full h-auto md:h-auto flex items-center justify-center overflow-hidden">
+        <div class="swiper mySwiper h-full w-full">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="src/Assets/Img/hero-section.jpg" class="object-cover w-full h-full" alt="Slide 1" />
+            </div>
+            <div class="swiper-slide">
+              <img src="src/Assets/Img/hero-section.jpg" class="object-cover w-full h-full" alt="Slide 2" />
+            </div>
+            <div class="swiper-slide">
+              <img src="src/Assets/Img/hero-section.jpg" class="object-cover w-full h-full" alt="Slide 3" />
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+        <div class="absolute inset-0 bg-black bg-opacity-50 z-20"></div>
+        <div class="absolute z-30 w-full flex flex-col items-center justify-center text-center space-y-4">
+          <h1 class="text-white md:text-5xl text-3xl font-bold my-2">
+            Agriculture Beyond Borders
+          </h1>
+          <p class="md:text-2xl text-xl font-semibold text-primary-light capitalize">
+            Connecting farmers to Buyers globally.
+          </p>
+        </div>
+      </section>
+
+
+
+      <section class="hidden md:flex flex-col justify-between gap-10 bg-primary-light  p-2">
+        <div class="flex flex-col items-center justify-start pt-10">
+          <img src="src/Assets/Img/home-log.jpg" class="w-[80px] h-[80px]" alt="hero-section-2" />
+        </div>
+
+        <div class="bg-white flex flex-col gap-5 py-5 px-2">
+          <div class="flex items-center justify-start gap-2 mt-10">
+            <ion-icon name="help-circle-outline" class="text-4xl text-[#305349] font-bold"></ion-icon>
+            <div class="leading-none flex flex-col">
+              <p class="text-[#305349] font-semibold text-base">NEED HELP ?</p>
+              <span class="text-[12px]">contact us</span>
+            </div>
+
+
+          </div>
+          <div class="flex items-center justify-start gap-2 mt-5">
+            <ion-icon name="star-half" class="text-3xl text-[#305349] font-bold"></ion-icon>
+            <div class="leading-none flex flex-col">
+              <p class="text-[#305349] font-semibold text-base">FEEDBACK</p>
+              <span class="text-[12px]">Leave your feedback</span>
+            </div>
+          </div>
+          <div class="flex items-center justify-start gap-2 mt-5">
+            <ion-icon name="thumbs-up-outline" class="text-3xl text-[#305349] font-bold"></ion-icon>
+            <div class="leading-none flex flex-col">
+              <p class="text-[#305349] font-semibold text-base">QUALITY ASSURANCE</p>
+              <span class="text-[12px]">Guarantee</span>
+            </div>
+          </div>
+        </div>
+
+      </section>
+    </section>
+    <section id="products">
+      <h2
+        class="text-primary-light font-title md:text-3xl text-xl font-bold py-5 text-center bg-black mb-5 flex items-center justify-center gap-5 hover:text-white transition-all duration-300">
+        <ion-icon name="apps"></ion-icon>Our Products
+      </h2>
+      <article id="productGrid" class="md:hidden block">
+      </article>
+      <!-- <button id="showMoreBtn" class="text-center mr-[100px] w-[200px] md:w-[200px] px-4 py-2 bg-primary-light text-white font-bold rounded shadow mt-4 hover:bg-primary transition duration-300">Show More</button> -->
+    </section>
+
+    <section class="my-10">
+      <h2
+        class="text-primary-light font-title md:text-3xl text-xl font-bold py-5 text-center bg-black mb-5 flex items-center justify-center gap-5 hover:text-white transition-all duration-300">
+        <ion-icon name="trending-up-outline"></ion-icon>Recent Updates
+      </h2>
+      <div id="recentlyUpdatedFarmProducts" class="container mx-auto mt-8">
+        <!-- Farm products will be rendered here -->
+      </div>
+    </section>
+
+    <section class="my-10">
+      <h2
+        class="text-primary-light font-title md:text-3xl text-xl font-bold py-5 text-center bg-black mb-5 flex items-center justify-center gap-5 hover:text-white transition-all duration-300">
+        <ion-icon name="flame"></ion-icon>Featured Premium Sellers
+      </h2>
+      <div id="premiumSellerProducts" class="container mx-auto mt-8">
+        <!-- Premium products will be injected here -->
+      </div>
+
+    </section>
+
+    <section id="contact">
+      <h2
+        class="text-primary-light font-title md:text-3xl text-xl font-bold py-5 text-center bg-black mb-5 flex items-center justify-center gap-5 hover:text-white transition-all duration-300">
+        <ion-icon name="call-outline"></ion-icon>Contact Us
+      </h2>
+      <div class="container md:px-10 px-4 py-10">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+          <div class="w-full md:w-1/2">
+            <form class="space-y-4">
+              <div>
+                <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                <input type="text" id="name" name="name"
+                  class="mt-1 block w-full px-3 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#D35400] border-primary-light placeholder:text-sm placeholder:text-primary-light"
+                  placeholder="Your Name" />
+              </div>
+
+              <div class="flex flex-wrap -mx-2">
+                <div class="px-2 w-full sm:w-1/2">
+                  <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                  <input type="email" id="email" name="email"
+                    class="mt-1 block w-full px-3 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#D35400] border-primary-light placeholder:text-sm placeholder:text-primary-light"
+                    placeholder="you@example.com" />
+                </div>
+                <div class="px-2 w-full sm:w-1/2">
+                  <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
+                  <input type="tel" id="phone" name="phone"
+                    class="mt-1 block w-full px-3 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#D35400] border-primary-light placeholder:text-sm placeholder:text-primary-light"
+                    placeholder="+1234567890" />
+                </div>
+              </div>
+
+              <div>
+                <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                <textarea id="message" name="message" rows="4"
+                  class="mt-1 block w-full px-3 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#D35400] border-primary-light placeholder:text-sm placeholder:text-primary-light"
+                  placeholder="Your message"></textarea>
+              </div>
+
+              <button type="submit"
+                class="mt-2 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-primary-light hover:bg-[#B54300] transition-all duration-300">
+                Submit
+              </button>
+            </form>
+          </div>
+
+          <div class="w-full md:w-1/2 flex flex-col items-start">
+            <p class="mb-4 text-lg font-semibold">
+              For questions, technical assistance, or more information, you
+              can reach us at:
+            </p>
+            <ul class="space-y-3">
+              <li class="flex items-center justify-start">
+                <a href="tel:+15551234567"
+                  class="flex items-center no-underline text-black hover:text-[#D35400] transition-colors duration-200 ease-in-out">
+                  <ion-icon name="call" class="mr-2 text-lg"></ion-icon>
+                  +1 (555) 123-4567
+                </a>
+              </li>
+              <li class="flex items-center justify-start">
+                <a href="mailto:support@example.com"
+                  class="flex items-center no-underline text-black hover:text-[#D35400] transition-colors duration-200 ease-in-out">
+                  <ion-icon name="mail" class="mr-2 text-lg"></ion-icon>
+                  support@example.com
+                </a>
+              </li>
+              <li class="flex items-center justify-start">
+                <a href="#"
+                  class="flex items-center no-underline text-black hover:text-[#D35400] transition-colors duration-200 ease-in-out">
+                  <ion-icon name="location" class="mr-2 text-lg"></ion-icon>
+                  1234 Example St, City, Country
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-[#ffffff] md:px-10 px-5 py-10 flex md:flex-row flex-col items-center justify-between">
+      <img src="src/Assets/Img/subscribe.jpg" alt="agrixpo" class="w-[100px] object-cover md:block hidden" />
+      <div class="flex md:flex-row flex-col items-start md:items-center justify-between gap-10">
+        <div class="flex flex-col gap-2 items-start justify-center">
+          <h3 class="text-lg font-semibold">New to <span class="text-primary">Agrixpo</span> </h3>
+          <p class="font-normal text-sm">Subscribe to our newsletter to get updates on our latest offers!</p>
+          <div>
+            <input type="email" placeholder="Enter your email"
+              class="border-primary-light border-2 rounded-md p-2 w-[200px] md:w-[300px]" />
+            <button class="bg-primary-light text-white px-4 py-2 rounded-md">Subscribe</button>
+          </div>
+
+        </div>
+        <div>
+          <p class="font-semibold">By subscribing, you agree to our <br><a href="#" class="text-primary-light">Privacy
+              Policy</a></p>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+  <footer class="bg-black text-white py-[40px] md:px-[100px] px-[30px] relative">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-[30px]">
+      <div>
+        <h3 class="text-xl font-bold">Quick Links</h3>
+        <ul class="mt-[10px]">
+          <li>
+            <a href="./home.html" class="hover:text-orange-500 transition-all duration-[0.3s]">Home</a>
+          </li>
+          <li>
+            <a href="./src/Pages/about.html" class="hover:text-orange-500 transition-all duration-[0.3s]">About</a>
+          </li>
+          <li>
+            <a href="#products" class="hover:text-orange-500 transition-all duration-[0.3s]">Products</a>
+          </li>
+          <li>
+            <a href="" class="hover:text-orange-500 transition-all duration-[0.3s]">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-xl font-bold">Contact</h3>
+        <p class="mt-[10px]">+000 000 000 000</p>
+        <p>123, ABC Street, XYZ City, Country, Pincode</p>
+      </div>
+      <div>
+        <h3 class="text-xl font-bold">Social Media</h3>
+        <div class="flex items-center gap-[10px] mt-[10px] mb-10">
+          <a href="https://www.facebook.com" class="text-2xl hover:text-orange-500"><ion-icon
+              name="logo-facebook"></ion-icon></a>
+          <a href="https://www.instagram.com" class="text-2xl hover:text-orange-500"><ion-icon
+              name="logo-instagram"></ion-icon></a>
+          <a href="https://www.twitter.com" class="text-2xl hover:text-orange-500"><ion-icon
+              name="logo-twitter"></ion-icon></a>
+          <a href="https://www.linkedin.com" class="text-2xl hover:text-orange-500"><ion-icon
+              name="logo-linkedin"></ion-icon></a>
+        </div>
+      </div>
+    </div>
+    <div class="absolute bottom-0 md:right-20 pb-[20px] pr-[20px]">
+      <a href="src/Pages/admin-login.html"
+        class="bg-primary-light hover:bg-orange-600 text-white font-semibold text-[16px] py-1 px-2 rounded transition duration-300 ease-in-out">
+        Admin Login
+      </a>
+    </div>
+  </footer>
+  <script src="src/scripts/index.js"></script>
+</body>
+
+</html>
