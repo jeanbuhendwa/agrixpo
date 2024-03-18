@@ -212,14 +212,15 @@ document.addEventListener("DOMContentLoaded", () => {
   // Content for each menu item
   const content = {
     overview:
-      '<h1 class="text-xl font-bold">Account Overview</h1><div class="max-w-4xl mx-auto p-5"><div class="grid grid-cols-1 md:grid-cols-2 gap-4"><div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200"><h2 class="text-lg font-semibold mb-4">Account Details</h2><p class="text-gray-700">Joe Doe <br> joedoe@gmail.com</p></div><div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200"><h2 class="text-lg font-semibold mb-4">Address Book</h2><p class="text-gray-700">123, ABC Street, XYZ City, Country,<br> Pincode</p></div><div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200"><h2 class="text-lg font-semibold mb-4">Agrix Credit</h2><p class="text-gray-700"> AgrixPo credit balance.</p></div><div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200"><h2 class="text-lg font-semibold mb-4">Newsletter Preferences</h2><p class="text-gray-700">You are currently not subscribed to any of our newsletters.</p></div></div></div>',
+      '<h1 class="text-xl font-bold py-5 text-center">Account Overview</h1><div class="max-w-4xl mx-auto p-0"><div class="grid grid-cols-1 md:grid-cols-2 gap-4"><div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200"><h2 class="text-lg font-semibold mb-4 flex items-center justify-center gap-2"><ion-icon name="person-outline" class="text-xl font-bold"></ion-icon>Account Details</h2><p class="text-gray-700">Joe Doe <br> joedoe@gmail.com</p></div><div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200"><h2 class="text-lg font-semibold mb-4 flex items-center justify-center gap-2"><ion-icon name="home-outline" class="text-xl font-bold"></ion-icon>Address Book</h2><p class="text-gray-700">123, ABC Street, XYZ City, Country,<br> Pincode</p></div><div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200"><h2 class="text-lg font-semibold mb-4 flex items-center justify-center gap-2"><ion-icon name="card-outline" class="text-xl font-bold"></ion-icon>Agrix Credit</h2><p class="text-gray-700"> AgrixPo credit balance.</p></div><div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200"><h2 class="text-lg font-semibold mb-4 flex items-center justify-center gap-2"><ion-icon name="newspaper-outline" class="text-xl font-bold"></ion-icon>Newsletter Preferences</h2><p class="text-gray-700">You are currently not subscribed to any of our newsletters.</p></div></div></div>',
     messages:
-      '<h1 class="text-xl font-bold">Messages</h1><p>Your messages...</p>',
-    orders: '<h1 class="text-xl font-bold">Orders</h1><p>Your orders...</p>',
+      '<h1 class="text-xl font-bold py-5 text-center">Messages</h1><p>Your messages...</p>',
+    orders:
+      '<h1 class="text-xl font-bold py-5 text-center">Orders</h1><p>Your orders...</p>',
     saved:
-      '<h1 class="text-xl font-bold">Saved Items</h1><p>Your saved items...</p>',
+      '<h1 class="text-xl font-bold py-5 text-center">Saved Items</h1><p>Your saved items...</p>',
     settings:
-      '<h1 class="text-xl font-bold">Settings</h1><p>Your account settings...</p>',
+      '<h1 class="text-xl font-bold py-5 text-center">Settings</h1><p>Your account settings...</p>',
   };
 
   menuItems.forEach((item) => {
