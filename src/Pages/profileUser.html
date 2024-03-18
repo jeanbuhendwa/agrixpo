@@ -46,17 +46,15 @@
 
 <body>
     <header class="bg-primary-light fixed top-0 left-0 w-full z-50 shadow-md">
-        <nav class="w-[100%] md:w-[95%] mx-auto px-4 py-2 relative">
+        <nav class="w-[100%] md:w-[95%] mx-auto px-4 py-4 relative">
             <div class="flex justify-between items-center">
                 <!-- Logo and Menu Icon for mobile -->
                 <div class="flex items-center gap-3">
                     <ion-icon onclick="onToggleMenu(this)" name="menu-outline"
                         class="cursor-pointer w-8 h-8 bg-primary-light p-[5px] rounded-sm md:hidden"></ion-icon>
-                    <a href="../../index.html" class="flex items-center gap-1">
-                        <img src="../Assets/logo.jpg" alt="logo" class="w-9" />
+                    <a href="../../home.html" class="flex items-center gap-1">
                         <div class="flex flex-col items-start">
                             <span class="font-black text-xl">AGRI<span class="text-white">XPO</span></span>
-                            <span class="text-xs text-white mt-[-5px] font-semibold">By Foroden</span>
                         </div>
                     </a>
                 </div>
@@ -82,7 +80,7 @@
             <div
                 class="nav-links hidden absolute bg-primary-light w-full h-[60vh] left-0 top-full p-4 flex-col gap-4 font-bold z-50 transition-all duration-300 md:hidden">
                 <ul class="flex flex-col text-base items-start p-5 gap-5 font-medium uppercase">
-                    <a href="../../index.html"
+                    <a href="../../home.html"
                         class="flex items-center justify-center gap-2 text-black font-bold hover:text-white transition-all duration-300">
                         <ion-icon name="home"></ion-icon>
                         <span>Home</span>
@@ -92,12 +90,12 @@
                         <ion-icon name="ellipsis-vertical"></ion-icon>
                         <span>About Us</span>
                     </a>
-                    <a href="../../index.html"
+                    <a href="../../home.html"
                         class="list-items flex items-center justify-center gap-2 text-black font-bold hover:text-white transition-all duration-300">
                         <ion-icon name="apps"></ion-icon>
                         <span>Products</span>
                     </a>
-                    <a href="../../index.html"
+                    <a href="../../home.html"
                         class="flex items-center justify-center gap-2 text-black font-bold hover:text-white transition-all duration-300">
                         <ion-icon name="call-outline"></ion-icon>
                         <span>Contact Us</span>
@@ -114,12 +112,12 @@
         </nav>
     </header>
 
-    <main class="md:pt-[70px] md:pb-5 md:px-[50px] pt-[50px] bg-[#ffe2c3]">
+    <main class="md:pt-[80px] md:pb-5 md:px-[50px] pt-[80px] bg-[#ffe2c3]">
         <div class="flex flex-col md:flex-row md:h-auto h-screen gap-5">
 
             <!-- Vertical Menu -->
             <div id="menu"
-                class="hidden md:block md:w-1/5 w-[60%] bg-black p-3 md:p-5 fixed right-0 top-14 md:static h-auto overflow-auto z-50">
+                class="hidden md:block md:w-1/5 w-[60%] bg-black p-3 md:p-5 fixed right-0 top-20 md:static h-auto overflow-auto z-50 md:z-0">
                 <ul>
                     <li class="menu-item text-white font-semibold hover:text-primary-light transition-all duration-300 uppercase p-2 my-2 text-sm flex items-center justify-start gap-2 cursor-pointer"
                         data-target="overview"><ion-icon name="person-circle-outline"></ion-icon>Account Overview</li>
@@ -136,7 +134,8 @@
 
             <!-- Main content shifted to accommodate the fixed menu -->
             <div id="details" class="md:w-3/4 p-5 mt-2 md:mt-0 md:ml-1/4 bg-opacity-50 bg-white backdrop-blur-sm">
-                <h1 class="text-xl font-bold text-center">Welcome to your profile</h1>
+                <h1 class="text-xl font-bold text-center py-10">Hello Joe Doe</h1>
+                <p class="text-center font-semibold text-lg">Welcome to your profile</p>
             </div>
         </div>
 
@@ -149,18 +148,18 @@
                 <h3 class="text-xl font-bold">Quick Links</h3>
                 <ul class="mt-[10px]">
                     <li>
-                        <a href="../../index.html" class="hover:text-orange-500 transition-all duration-[0.3s]">Home</a>
+                        <a href="../../home.html" class="hover:text-orange-500 transition-all duration-[0.3s]">Home</a>
                     </li>
                     <li>
                         <a href="../../src/Pages/about.html"
                             class="hover:text-orange-500 transition-all duration-[0.3s]">About</a>
                     </li>
                     <li>
-                        <a href="../../index.html"
+                        <a href="../../home.html"
                             class="hover:text-orange-500 transition-all duration-[0.3s]">Products</a>
                     </li>
                     <li>
-                        <a href="../../index.html"
+                        <a href="../../home.html"
                             class="hover:text-orange-500 transition-all duration-[0.3s]">Contact</a>
                     </li>
                 </ul>
