@@ -215,12 +215,18 @@ document.addEventListener("DOMContentLoaded", () => {
       '<h1 class="text-xl font-bold py-5 text-center">Account Overview</h1><div class="max-w-4xl mx-auto p-0"><div class="grid grid-cols-1 md:grid-cols-2 gap-4"><div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200"><h2 class="text-lg font-semibold mb-4 flex items-center justify-center gap-2"><ion-icon name="person-outline" class="text-xl font-bold"></ion-icon>Account Details</h2><p class="text-gray-700">Joe Doe <br> joedoe@gmail.com</p></div><div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200"><h2 class="text-lg font-semibold mb-4 flex items-center justify-center gap-2"><ion-icon name="home-outline" class="text-xl font-bold"></ion-icon>Address Book</h2><p class="text-gray-700">123, ABC Street, XYZ City, Country,<br> Pincode</p></div><div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200"><h2 class="text-lg font-semibold mb-4 flex items-center justify-center gap-2"><ion-icon name="card-outline" class="text-xl font-bold"></ion-icon>Agrix Credit</h2><p class="text-gray-700"> AgrixPo credit balance.</p></div><div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200"><h2 class="text-lg font-semibold mb-4 flex items-center justify-center gap-2"><ion-icon name="newspaper-outline" class="text-xl font-bold"></ion-icon>Newsletter Preferences</h2><p class="text-gray-700">You are currently not subscribed to any of our newsletters.</p></div></div></div>',
     messages:
       '<h1 class="text-xl font-bold py-5 text-center">Messages</h1><p>Your messages...</p>',
+    notifications:
+      '<h1 class="text-xl font-bold py-5 text-center">Notifications</h1><p>Your notifications...</p>',
     orders:
       '<h1 class="text-xl font-bold py-5 text-center">Orders</h1><p>Your orders...</p>',
-    saved:
-      '<h1 class="text-xl font-bold py-5 text-center">Saved Items</h1><p>Your saved items...</p>',
-    settings:
-      '<h1 class="text-xl font-bold py-5 text-center">Settings</h1><p>Your account settings...</p>',
+    insights:
+      '<h1 class="text-xl font-bold py-5 text-center">Insights</h1><p>Your insights...</p>',
+    favoritePro:
+      '<h1 class="text-xl font-bold py-5 text-center">Favorite Produce</h1><p>Your Favorite Produce...</p>',
+    favoriteSeller:
+      '<h1 class="text-xl font-bold py-5 text-center">Favorite Sellers</h1><p>Your Favorite Sellers...</p>',
+    subscriptions:
+      '<h1 class="text-xl font-bold py-5 text-center">Subscriptions</h1><p>Your subscriptions...</p>',
   };
 
   menuItems.forEach((item) => {
@@ -236,4 +242,23 @@ document.addEventListener("DOMContentLoaded", () => {
       details.innerHTML = content[target];
     });
   });
+});
+
+// Function for the scroll top btn
+var mybutton = document.getElementById("scrollToTopBtn");
+
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+mybutton.addEventListener("click", function () {
+  window.scrollTo({ top: 0, behavior: "smooth" });
 });
