@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=\, initial-scale=1.0" />
 
@@ -10,197 +9,295 @@
     <link href="../../output.css" rel="stylesheet" />
 
     <!-- Importing Icon -->
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
 
     <!-- The below is the favicon -->
     <link rel="icon" type="image/jpg" href="src/Assets/favIcon.jpg" />
 
     <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
 
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-
     <!-- The below is the title -->
     <title>AGRIXPO | Profile</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://unpkg.com/ionicons@5.5.2/dist/css/ionicons.min.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/ionicons@5.5.2/dist/css/ionicons.min.css"
+      rel="stylesheet"
+    />
     <style>
-        /* Additional styles for sliding effect */
-        .menu-hidden {
-            transform: translateX(-100%);
-        }
+      /* Additional styles for sliding effect */
+      .menu-hidden {
+        transform: translateX(-100%);
+      }
 
-        .menu-shown {
-            transform: translateX(0);
-        }
+      .menu-shown {
+        transform: translateX(0);
+      }
 
-        .menu-transition {
-            transition: transform 0.3s ease;
-        }
+      .menu-transition {
+        transition: transform 0.3s ease;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <header class="bg-primary-light fixed top-0 left-0 w-full z-50 shadow-md">
-        <nav class="w-[100%] md:w-[95%] mx-auto px-4 py-4 relative">
-            <div class="flex justify-between items-center">
-                <!-- Logo and Menu Icon for mobile -->
-                <div class="flex items-center gap-3">
-                    <ion-icon onclick="onToggleMenu(this)" name="menu-outline"
-                        class="cursor-pointer w-8 h-8 bg-primary-light p-[5px] rounded-sm md:hidden"></ion-icon>
-                    <a href="../../home.html" class="flex items-center gap-1">
-                        <div class="flex flex-col items-start">
-                            <span class="font-black text-xl">AGRI<span class="text-white">XPO</span></span>
-                        </div>
-                    </a>
-                </div>
+      <nav class="w-[100%] md:w-[95%] mx-auto px-4 py-4 relative">
+        <div class="flex justify-between items-center">
+          <!-- Logo and Menu Icon for mobile -->
+          <div class="flex items-center gap-3">
+            <ion-icon
+              onclick="onToggleMenu(this)"
+              name="menu-outline"
+              class="cursor-pointer w-8 h-8 bg-primary-light p-[5px] rounded-sm md:hidden"
+            ></ion-icon>
+            <a href="../../home.html" class="flex items-center gap-1">
+              <div class="flex flex-col items-start">
+                <span class="font-black text-xl"
+                  >AGRI<span class="text-white">XPO</span></span
+                >
+              </div>
+            </a>
+          </div>
 
-                <!-- Account and cart section -->
-                <div class="flex items-center gap-4 justify-center relative">
-                    <div class="relative">
-                        <a id="menuToggle"
-                            class="flex items-center justify-center gap-2 cursor-pointer border-none bg-none">
-                            <ion-icon name="person" class="text-xl"></ion-icon>
-                            <span class="text-base font-semibold hidden md:block">Joe Doe</span>
-                        </a>
-                    </div>
-                    <div class="flex items-center justify-center gap-2 cursor-pointer">
-                        <ion-icon name="settings-outline" class="text-2xl font-extrabold"></ion-icon>
-                        <span class="hidden font-semibold">Help</span>
-                    </div>
-
-                </div>
+          <!-- Account and cart section -->
+          <div class="flex items-center gap-4 justify-center relative">
+            <div class="relative">
+              <a
+                id="menuToggle"
+                class="flex items-center justify-center gap-2 cursor-pointer border-none bg-none"
+              >
+                <ion-icon name="person" class="text-xl"></ion-icon>
+                <span class="text-base font-semibold hidden md:block"
+                  >Joe Doe</span
+                >
+              </a>
             </div>
-
-            <!-- Mobile Menu (hidden by default, will show when menu icon is clicked) -->
-            <div
-                class="nav-links hidden absolute bg-primary-light w-full h-[60vh] left-0 top-full p-4 flex-col gap-4 font-bold z-50 transition-all duration-300 md:hidden">
-                <ul class="flex flex-col text-base items-start p-5 gap-5 font-medium uppercase">
-                    <a href="../../home.html"
-                        class="flex items-center justify-center gap-2 text-black font-bold hover:text-white transition-all duration-300">
-                        <ion-icon name="home"></ion-icon>
-                        <span>Home</span>
-                    </a>
-                    <a href="./about.html"
-                        class="flex items-center justify-center gap-2 text-black font-bold hover:text-white transition-all duration-300">
-                        <ion-icon name="ellipsis-vertical"></ion-icon>
-                        <span>About Us</span>
-                    </a>
-                    <a href="../../home.html"
-                        class="list-items flex items-center justify-center gap-2 text-black font-bold hover:text-white transition-all duration-300">
-                        <ion-icon name="apps"></ion-icon>
-                        <span>Products</span>
-                    </a>
-                    <a href="../../home.html"
-                        class="flex items-center justify-center gap-2 text-black font-bold hover:text-white transition-all duration-300">
-                        <ion-icon name="call-outline"></ion-icon>
-                        <span>Contact Us</span>
-                    </a>
-                    <a href=""
-                        class="flex items-center justify-center gap-2 text-black font-bold hover:text-white transition-all duration-300">
-                        <ion-icon name="clipboard-outline"></ion-icon>
-                        <span>Blog</span>
-                    </a>
-
-                </ul>
-
+            <div class="flex items-center justify-center gap-2 cursor-pointer">
+              <ion-icon
+                name="settings-outline"
+                class="text-2xl font-extrabold"
+              ></ion-icon>
+              <span class="hidden font-semibold">Help</span>
             </div>
-        </nav>
+          </div>
+        </div>
+
+        <!-- Mobile Menu (hidden by default, will show when menu icon is clicked) -->
+        <div
+          class="nav-links hidden absolute bg-primary-light w-full h-[60vh] left-0 top-full p-4 flex-col gap-4 font-bold z-50 transition-all duration-300 md:hidden"
+        >
+          <ul
+            class="flex flex-col text-base items-start p-5 gap-5 font-medium uppercase"
+          >
+            <a
+              href="../../home.html"
+              class="flex items-center justify-center gap-2 text-black font-bold hover:text-white transition-all duration-300"
+            >
+              <ion-icon name="home"></ion-icon>
+              <span>Home</span>
+            </a>
+            <a
+              href="./about.html"
+              class="flex items-center justify-center gap-2 text-black font-bold hover:text-white transition-all duration-300"
+            >
+              <ion-icon name="ellipsis-vertical"></ion-icon>
+              <span>About Us</span>
+            </a>
+            <a
+              href="../../home.html"
+              class="list-items flex items-center justify-center gap-2 text-black font-bold hover:text-white transition-all duration-300"
+            >
+              <ion-icon name="apps"></ion-icon>
+              <span>Products</span>
+            </a>
+            <a
+              href="../../home.html"
+              class="flex items-center justify-center gap-2 text-black font-bold hover:text-white transition-all duration-300"
+            >
+              <ion-icon name="call-outline"></ion-icon>
+              <span>Contact Us</span>
+            </a>
+            <a
+              href=""
+              class="flex items-center justify-center gap-2 text-black font-bold hover:text-white transition-all duration-300"
+            >
+              <ion-icon name="clipboard-outline"></ion-icon>
+              <span>Blog</span>
+            </a>
+          </ul>
+        </div>
+      </nav>
     </header>
 
     <main class="md:pt-[80px] md:pb-5 md:px-[50px] pt-[80px] bg-[#ffe2c3]">
-        <div class="flex flex-col md:flex-row md:h-auto h-screen gap-5">
-
-            <!-- Vertical Menu -->
-            <div id="menu"
-                class="hidden md:block md:w-1/5 w-[60%] bg-black p-3 md:p-5 fixed right-0 top-20 md:static h-auto overflow-auto z-50 md:z-0">
-                <ul>
-                    <li class="menu-item text-white font-semibold hover:text-primary-light transition-all duration-300 uppercase p-2 my-2 text-sm flex items-center justify-start gap-2 cursor-pointer"
-                        data-target="overview"><ion-icon name="person-circle-outline"></ion-icon>Account Overview</li>
-                    <li class="menu-item text-white font-semibold hover:text-primary-light transition-all duration-300 uppercase p-2 my-2 text-sm flex items-center justify-start gap-2 cursor-pointer"
-                        data-target="messages"><ion-icon name="chatbox-ellipses-outline"></ion-icon>Messages</li>
-                        <li class="menu-item text-white font-semibold hover:text-primary-light transition-all duration-300 uppercase p-2 my-2 text-sm flex items-center justify-start gap-2 cursor-pointer"
-                        data-target="notifications"><ion-icon name="notifications-outline"></ion-icon>Notifications</li>
-                    <li class="menu-item text-white font-semibold hover:text-primary-light transition-all duration-300 uppercase p-2 my-2 text-sm flex items-center justify-start gap-2 cursor-pointer"
-                        data-target="orders"><ion-icon name="albums-outline"></ion-icon>Orders</li>
-                        <li class="menu-item text-white font-semibold hover:text-primary-light transition-all duration-300 uppercase p-2 my-2 text-sm flex items-center justify-start gap-2 cursor-pointer"
-                        data-target="insights"><ion-icon name="stats-chart-outline"></ion-icon>Insights</li>
-                    <li class="menu-item text-white font-semibold hover:text-primary-light transition-all duration-300 uppercase p-2 my-2 text-sm flex items-center justify-start gap-2 cursor-pointer"
-                        data-target="favoritePro"><ion-icon name="bookmark-outline"></ion-icon>Favorite Produce</li>
-                        <li class="menu-item text-white font-semibold hover:text-primary-light transition-all duration-300 uppercase p-2 my-2 text-sm flex items-center justify-start gap-2 cursor-pointer"
-                        data-target="favoriteSeller"><ion-icon name="bookmark-outline"></ion-icon>Favorite Sellers</li>
-                    <li class="menu-item text-white font-semibold hover:text-primary-light transition-all duration-300 uppercase p-2 my-2 text-sm flex items-center justify-start gap-2 cursor-pointer"
-                        data-target="subscriptions"><ion-icon name="checkbox-outline"></ion-icon>Subscriptions</li>
-                </ul>
-            </div>
-
-            <!-- Main content shifted to accommodate the fixed menu -->
-            <div id="details" class="md:w-3/4 p-5 mt-2 md:mt-0 md:ml-1/4 bg-opacity-50 bg-white backdrop-blur-sm">
-                <div class="flex flex-col items-center justify-center gap-5">
-                    <h1 class="text-xl font-bold text-center py-2">Hello Joe Doe</h1>
-                <p class="text-center font-semibold text-lg">Welcome to your profile</p>
-                </div>
-                
-            </div>
+      <div class="flex flex-col md:flex-row md:h-auto h-screen gap-5">
+        <!-- Vertical Menu -->
+        <div
+          id="menu"
+          class="hidden md:block md:w-1/5 w-[60%] bg-black p-3 md:p-5 fixed right-0 top-20 md:static h-auto overflow-auto z-50 md:z-0"
+        >
+          <ul>
+            <li
+              class="menu-item text-white font-semibold hover:text-primary-light transition-all duration-300 uppercase p-2 my-2 text-sm flex items-center justify-start gap-2 cursor-pointer"
+              data-target="overview"
+            >
+              <ion-icon name="person-circle-outline"></ion-icon>Account Overview
+            </li>
+            <li
+              class="menu-item text-white font-semibold hover:text-primary-light transition-all duration-300 uppercase p-2 my-2 text-sm flex items-center justify-start gap-2 cursor-pointer"
+              data-target="messages"
+            >
+              <ion-icon name="chatbox-ellipses-outline"></ion-icon>Messages
+            </li>
+            <li
+              class="menu-item text-white font-semibold hover:text-primary-light transition-all duration-300 uppercase p-2 my-2 text-sm flex items-center justify-start gap-2 cursor-pointer"
+              data-target="notifications"
+            >
+              <ion-icon name="notifications-outline"></ion-icon>Notifications
+            </li>
+            <li
+              class="menu-item text-white font-semibold hover:text-primary-light transition-all duration-300 uppercase p-2 my-2 text-sm flex items-center justify-start gap-2 cursor-pointer"
+              data-target="orders"
+            >
+              <ion-icon name="albums-outline"></ion-icon>Orders
+            </li>
+            <li
+              class="menu-item text-white font-semibold hover:text-primary-light transition-all duration-300 uppercase p-2 my-2 text-sm flex items-center justify-start gap-2 cursor-pointer"
+              data-target="insights"
+            >
+              <ion-icon name="stats-chart-outline"></ion-icon>Insights
+            </li>
+            <li
+              class="menu-item text-white font-semibold hover:text-primary-light transition-all duration-300 uppercase p-2 my-2 text-sm flex items-center justify-start gap-2 cursor-pointer"
+              data-target="favoritePro"
+            >
+              <ion-icon name="bookmark-outline"></ion-icon>Favorite Produce
+            </li>
+            <li
+              class="menu-item text-white font-semibold hover:text-primary-light transition-all duration-300 uppercase p-2 my-2 text-sm flex items-center justify-start gap-2 cursor-pointer"
+              data-target="favoriteSeller"
+            >
+              <ion-icon name="bookmark-outline"></ion-icon>Favorite Sellers
+            </li>
+            <li
+              class="menu-item text-white font-semibold hover:text-primary-light transition-all duration-300 uppercase p-2 my-2 text-sm flex items-center justify-start gap-2 cursor-pointer"
+              data-target="subscriptions"
+            >
+              <ion-icon name="checkbox-outline"></ion-icon>Subscriptions
+            </li>
+          </ul>
         </div>
 
-
-
+        <!-- Main content shifted to accommodate the fixed menu -->
+        <div
+          id="details"
+          class="md:w-3/4 p-5 mt-2 md:mt-0 md:ml-1/4 bg-opacity-50 bg-white backdrop-blur-sm"
+        >
+          <div class="flex flex-col items-center justify-center gap-5">
+            <h1 class="text-xl font-bold text-center py-2">Hello Joe Doe</h1>
+            <p class="text-center font-semibold text-lg">
+              Welcome to your profile
+            </p>
+          </div>
+        </div>
+      </div>
     </main>
-    <footer class="bg-black text-white py-[40px] md:px-[100px] px-[30px] relative">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-[30px]">
-            <div>
-                <h3 class="text-xl font-bold">Quick Links</h3>
-                <ul class="mt-[10px]">
-                    <li>
-                        <a href="../../home.html" class="hover:text-orange-500 transition-all duration-[0.3s]">Home</a>
-                    </li>
-                    <li>
-                        <a href="../../src/Pages/about.html"
-                            class="hover:text-orange-500 transition-all duration-[0.3s]">About</a>
-                    </li>
-                    <li>
-                        <a href="../../home.html"
-                            class="hover:text-orange-500 transition-all duration-[0.3s]">Products</a>
-                    </li>
-                    <li>
-                        <a href="../../home.html"
-                            class="hover:text-orange-500 transition-all duration-[0.3s]">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <div>
-                <h3 class="text-xl font-bold">Contact</h3>
-                <p class="mt-[10px]">+000 000 000 000</p>
-                <p>123, ABC Street, XYZ City, Country, Pincode</p>
-            </div>
-            <div>
-                <h3 class="text-xl font-bold">Social Media</h3>
-                <div class="flex items-center gap-[10px] mt-[10px] mb-10">
-                    <a href="https://www.facebook.com" class="text-2xl hover:text-orange-500"><ion-icon
-                            name="logo-facebook"></ion-icon></a>
-                    <a href="https://www.instagram.com" class="text-2xl hover:text-orange-500"><ion-icon
-                            name="logo-instagram"></ion-icon></a>
-                    <a href="https://www.twitter.com" class="text-2xl hover:text-orange-500"><ion-icon
-                            name="logo-twitter"></ion-icon></a>
-                    <a href="https://www.linkedin.com" class="text-2xl hover:text-orange-500"><ion-icon
-                            name="logo-linkedin"></ion-icon></a>
-                </div>
-            </div>
+    <footer
+      class="bg-black text-white py-[40px] md:px-[100px] px-[30px] relative"
+    >
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-[30px]">
+        <div>
+          <h3 class="text-xl font-bold">Quick Links</h3>
+          <ul class="mt-[10px]">
+            <li>
+              <a
+                href="../../home.html"
+                class="hover:text-orange-500 transition-all duration-[0.3s]"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="../../src/Pages/about.html"
+                class="hover:text-orange-500 transition-all duration-[0.3s]"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="../../home.html"
+                class="hover:text-orange-500 transition-all duration-[0.3s]"
+                >Products</a
+              >
+            </li>
+            <li>
+              <a
+                href="../../home.html"
+                class="hover:text-orange-500 transition-all duration-[0.3s]"
+                >Contact</a
+              >
+            </li>
+          </ul>
         </div>
-        <div class="absolute bottom-0 md:right-20 pb-[20px] pr-[20px]">
-            <a href="src/Pages/admin-login.html"
-                class="bg-primary-light hover:bg-orange-600 text-white font-semibold text-[16px] py-1 px-2 rounded transition duration-300 ease-in-out">
-                Admin Login
-            </a>
+        <div>
+          <h3 class="text-xl font-bold">Contact</h3>
+          <p class="mt-[10px]">+000 000 000 000</p>
+          <p>123, ABC Street, XYZ City, Country, Pincode</p>
         </div>
+        <div>
+          <h3 class="text-xl font-bold">Social Media</h3>
+          <div class="flex items-center gap-[10px] mt-[10px] mb-10">
+            <a
+              href="https://www.facebook.com"
+              class="text-2xl hover:text-orange-500"
+              ><ion-icon name="logo-facebook"></ion-icon
+            ></a>
+            <a
+              href="https://www.instagram.com"
+              class="text-2xl hover:text-orange-500"
+              ><ion-icon name="logo-instagram"></ion-icon
+            ></a>
+            <a
+              href="https://www.twitter.com"
+              class="text-2xl hover:text-orange-500"
+              ><ion-icon name="logo-twitter"></ion-icon
+            ></a>
+            <a
+              href="https://www.linkedin.com"
+              class="text-2xl hover:text-orange-500"
+              ><ion-icon name="logo-linkedin"></ion-icon
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="absolute bottom-0 md:right-20 pb-[20px] pr-[20px]">
+        <a
+          href="src/Pages/admin-login.html"
+          class="bg-primary-light hover:bg-orange-600 text-white font-semibold text-[16px] py-1 px-2 rounded transition duration-300 ease-in-out"
+        >
+          Admin Login
+        </a>
+      </div>
     </footer>
 
     <script src="../scripts/index.js"></script>
-</body>
-
+  </body>
 </html>
