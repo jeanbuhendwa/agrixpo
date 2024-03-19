@@ -68,9 +68,9 @@
                             <span class="text-base font-semibold hidden md:block">Joe Doe</span>
                         </a>
                     </div>
-                    <div class="hidden md:flex items-center justify-center gap-2 cursor-pointer">
-                        <ion-icon name="help-circle-outline" class="text-2xl font-extrabold"></ion-icon>
-                        <span class=" font-semibold">Help</span>
+                    <div class="flex items-center justify-center gap-2 cursor-pointer">
+                        <ion-icon name="settings-outline" class="text-2xl font-extrabold"></ion-icon>
+                        <span class="hidden font-semibold">Help</span>
                     </div>
 
                 </div>
@@ -123,19 +123,28 @@
                         data-target="overview"><ion-icon name="person-circle-outline"></ion-icon>Account Overview</li>
                     <li class="menu-item text-white font-semibold hover:text-primary-light transition-all duration-300 uppercase p-2 my-2 text-sm flex items-center justify-start gap-2 cursor-pointer"
                         data-target="messages"><ion-icon name="chatbox-ellipses-outline"></ion-icon>Messages</li>
+                        <li class="menu-item text-white font-semibold hover:text-primary-light transition-all duration-300 uppercase p-2 my-2 text-sm flex items-center justify-start gap-2 cursor-pointer"
+                        data-target="notifications"><ion-icon name="notifications-outline"></ion-icon>Notifications</li>
                     <li class="menu-item text-white font-semibold hover:text-primary-light transition-all duration-300 uppercase p-2 my-2 text-sm flex items-center justify-start gap-2 cursor-pointer"
                         data-target="orders"><ion-icon name="albums-outline"></ion-icon>Orders</li>
+                        <li class="menu-item text-white font-semibold hover:text-primary-light transition-all duration-300 uppercase p-2 my-2 text-sm flex items-center justify-start gap-2 cursor-pointer"
+                        data-target="insights"><ion-icon name="stats-chart-outline"></ion-icon>Insights</li>
                     <li class="menu-item text-white font-semibold hover:text-primary-light transition-all duration-300 uppercase p-2 my-2 text-sm flex items-center justify-start gap-2 cursor-pointer"
-                        data-target="saved"><ion-icon name="bookmark-outline"></ion-icon>Saved Items</li>
+                        data-target="favoritePro"><ion-icon name="bookmark-outline"></ion-icon>Favorite Produce</li>
+                        <li class="menu-item text-white font-semibold hover:text-primary-light transition-all duration-300 uppercase p-2 my-2 text-sm flex items-center justify-start gap-2 cursor-pointer"
+                        data-target="favoriteSeller"><ion-icon name="bookmark-outline"></ion-icon>Favorite Sellers</li>
                     <li class="menu-item text-white font-semibold hover:text-primary-light transition-all duration-300 uppercase p-2 my-2 text-sm flex items-center justify-start gap-2 cursor-pointer"
-                        data-target="settings"><ion-icon name="settings-outline"></ion-icon>Settings</li>
+                        data-target="subscriptions"><ion-icon name="checkbox-outline"></ion-icon>Subscriptions</li>
                 </ul>
             </div>
 
             <!-- Main content shifted to accommodate the fixed menu -->
             <div id="details" class="md:w-3/4 p-5 mt-2 md:mt-0 md:ml-1/4 bg-opacity-50 bg-white backdrop-blur-sm">
-                <h1 class="text-xl font-bold text-center py-10">Hello Joe Doe</h1>
+                <div class="flex flex-col items-center justify-center gap-5">
+                    <h1 class="text-xl font-bold text-center py-2">Hello Joe Doe</h1>
                 <p class="text-center font-semibold text-lg">Welcome to your profile</p>
+                </div>
+                
             </div>
         </div>
 
