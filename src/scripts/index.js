@@ -45,52 +45,52 @@ const categories = [
   {
     name: "Fruits",
     image: "https://source.unsplash.com/featured/?fruits",
-    link: "/fruits.html",
+    link: "./src/pages/fruits.html",
   },
   {
     name: "Dairy",
     image: "https://source.unsplash.com/featured/?milk",
-    link: "/dairy.html",
+    link: "./src/pages/dairy.html",
   },
   {
     name: "Vegetables",
     image: "https://source.unsplash.com/featured/?vegetables",
-    link: "/vegetables.html",
+    link: "./src/pages/vegetables.html",
   },
   {
     name: "Legumes",
     image: "https://source.unsplash.com/featured/?legumes",
-    link: "/legumes.html",
+    link: "./src/pages/legumes.html",
   },
   {
     name: "Meat",
     image: "https://source.unsplash.com/featured/?meat",
-    link: "/meat.html",
+    link: "./src/pages/meat.html",
   },
   {
     name: "Poultry",
     image: "https://source.unsplash.com/featured/?poultry",
-    link: "/poultry.html",
+    link: "./src/pages/poultry.html",
   },
   {
     name: "Fish",
     image: "https://source.unsplash.com/featured/?fish",
-    link: "/fish.html",
+    link: "./src/pages/fish.html",
   },
   {
     name: "Seafood",
     image: "https://source.unsplash.com/featured/?seafood",
-    link: "/seafood.html",
+    link: "./src/pages/seafood.html",
   },
   {
     name: "Bakery",
     image: "https://source.unsplash.com/featured/?bakery",
-    link: "/bakery.html",
+    link: "./src/pages/bakery.html",
   },
   {
     name: "Fish",
     image: "https://source.unsplash.com/featured/?fish",
-    link: "/fish.html",
+    link: "./src/pages/fish.html",
   },
 ];
 
