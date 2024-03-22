@@ -160,36 +160,39 @@
     </header>
 
     <main class="md:pt-[80px] pt-[130px] md:px-[30px] bg-[#ffe2c3]">
-        <div class="flex items-center justify-between px-5">
-            <a href="../../home.html" class="hidden md:block">
-                <ion-icon name="return-up-back-outline"></ion-icon>
-                <span class="text-primary-dark font-bold">Back to Home</span>
-            </a>
-            <div>
-                <h1 class="text-center text-3xl md:font-bold font-semibold font-title">Fruits</h1>
-        <hr class="w-20 mx-auto border-2 border-primary-dark mt-2 mb-5" />
-            </div>
-            <div class="flex items-center space-x-2">
-                
-                <select class="text-gray-900 text-sm rounded-lg bg-[#ffe2c3] focus:ring-none focus:border-none block w-full p-2.5 dark:text-black">
-                    <option selected> Sort by: </option>
-                    <option value="price-low-high">Price: Low to High</option>
-                    <option value="price-high-low">Price: High to Low</option>
-                    <option value="newest">Newest</option>
-                    <option value="oldest">Oldest</option>
-                </select>
-            </div>
-            
-            
+      <div class="flex items-center justify-between px-5">
+        <a href="../../home.html" class="hidden md:block">
+          <ion-icon name="return-up-back-outline"></ion-icon>
+          <span class="text-primary-dark font-bold">Back to Home</span>
+        </a>
+        <div>
+          <h1
+            class="text-center text-3xl md:font-bold font-semibold font-title"
+          >
+            Dairy
+          </h1>
+          <hr class="w-20 mx-auto border-2 border-primary-dark mt-2 mb-5" />
         </div>
-        
-      <div id="fruitGrid" class="grid grid-cols-2 md:grid-cols-6 gap-4 p-4">
-        <!-- Fruit cards will be inserted here dynamically -->
+        <div class="flex items-center space-x-2">
+          <select
+            class="text-gray-900 text-sm rounded-lg bg-[#ffe2c3] focus:ring-none focus:border-none block w-full p-2.5 dark:text-black"
+          >
+            <option selected>Sort by:</option>
+            <option value="price-low-high">Price: Low to High</option>
+            <option value="price-high-low">Price: High to Low</option>
+            <option value="newest">Newest</option>
+            <option value="oldest">Oldest</option>
+          </select>
+        </div>
       </div>
 
-      <!-- Modal for displaying fruit details -->
+      <div id="dairyGrid" class="grid grid-cols-2 md:grid-cols-6 gap-4 p-4">
+        <!-- Dairy product cards will be inserted here dynamically -->
+      </div>
+
+      <!-- Modal for displaying dairy product details -->
       <div
-        id="fruitDetailModal"
+        id="dairyDetailModal"
         class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full z-50"
         onclick="event.stopPropagation();"
       >
@@ -216,8 +219,8 @@
               />
             </svg>
           </button>
-          <div id="fruitDetails" class="mt-3">
-            <!-- Fruit details will go here -->
+          <div id="dairyDetails" class="mt-3">
+            <!-- Dairy product details will go here -->
           </div>
           <div class="flex justify-end space-x-2 p-2 md:mt-5">
             <button
@@ -318,98 +321,100 @@
 
     <script>
       // For the Fruits page
-      const fruits = [
+      const dairyProducts = [
         {
           id: 1,
-          name: "Apple",
-          desc: "Rich in vitamins",
+          name: "Milk",
+          desc: "Rich in calcium and vitamins",
           rating: 4,
-          image: "https://source.unsplash.com/1600x900/?apple",
+          image: "https://source.unsplash.com/1600x900/?milk",
         },
         {
           id: 2,
-          name: "Banana",
-          desc: "High in potassium",
+          name: "Cheese",
+          desc: "Great source of protein",
           rating: 5,
-          image: "https://source.unsplash.com/1600x900/?banana",
+          image: "https://source.unsplash.com/1600x900/?cheese",
         },
         {
           id: 3,
-          name: "Orange",
-          desc: "Rich in Vitamin C",
+          name: "Yogurt",
+          desc: "Rich in probiotics",
           rating: 4,
-          image: "https://source.unsplash.com/1600x900/?orange",
+          image: "https://source.unsplash.com/1600x900/?yogurt",
         },
         {
           id: 4,
-          name: "Grapes",
-          desc: "Rich in antioxidants",
+          name: "Butter",
+          desc: "High in fat, great for cooking",
           rating: 5,
-          image: "https://source.unsplash.com/1600x900/?grapes",
+          image: "https://source.unsplash.com/1600x900/?butter",
         },
         {
           id: 5,
-          name: "Pineapple",
-          desc: "Rich in Vitamin C",
+          name: "Ice Cream",
+          desc: "Frozen dairy delight",
           rating: 4,
-          image: "https://source.unsplash.com/1600x900/?pineapple",
+          image: "https://source.unsplash.com/1600x900/?ice-cream",
         },
         {
           id: 6,
-          name: "Strawberry",
-          desc: "Rich in antioxidants",
+          name: "Cottage Cheese",
+          desc: "Low in fat, high in protein",
           rating: 5,
-          image: "https://source.unsplash.com/1600x900/?strawberry",
+          image: "https://source.unsplash.com/1600x900/?cottage-cheese",
         },
         {
-            id: 7,
-            name: "Mango",
-            desc: "Rich in Vitamin A",
-            rating: 4,
-            image: "https://source.unsplash.com/1600x900/?mango",
-            },
-            {
-            id: 8,
-            name: "Watermelon",
-            desc: "Rich in water content",
-            rating: 5,
-            image: "https://source.unsplash.com/1600x900/?watermelon",
-            },
+          id: 7,
+          name: "Sour Cream",
+          desc: "Fermented cream, great as a topping",
+          rating: 4,
+          image: "https://source.unsplash.com/1600x900/?sour-cream",
+        },
+        {
+          id: 8,
+          name: "Kefir",
+          desc: "Fermented milk drink",
+          rating: 5,
+          image: "https://source.unsplash.com/1600x900/?kefir",
+        },
       ];
 
       document.addEventListener("DOMContentLoaded", function () {
-        const grid = document.getElementById("fruitGrid");
+        const grid = document.getElementById("dairyGrid");
 
-        fruits.forEach((fruit) => {
+        dairyProducts.forEach((dairyProduct) => {
           const card = document.createElement("div");
           card.className =
             "bg-white shadow rounded overflow-hidden flex flex-col";
           card.innerHTML = `
-          <img src="${fruit.image}" alt="${fruit.name}" class="w-full h-25 md:h-40 object-cover">
+          <img src="${dairyProduct.image}" alt="${dairyProduct.name}" class="w-full h-25 md:h-40 object-cover">
           <div class="p-4">
-              <h3 class="text-lg font-semibold">${fruit.name}</h3>
-              <p class="text-sm">${fruit.desc}</p>
+              <h3 class="text-lg font-semibold">${dairyProduct.name}</h3>
+              <p class="text-sm">${dairyProduct.desc}</p>
               <div class="flex items-center justify-between gap-4 mt-2">
-                  <span class="flex items-center gap-1">⭐ ${fruit.rating}</span>
+                  <span class="flex items-center gap-1">⭐ ${dairyProduct.rating}</span>
                   <button class="like-btn flex items-center justify-center gap-1"><span class="hidden md:block text-[10px] font-bold">Add to favorite</span><ion-icon name="bookmark-outline"></ion-icon></button>
               </div>
           </div>
       `;
-          card.addEventListener("click", () => showFruitDetails(fruit));
+          card.addEventListener("click", () =>
+            showDairyProductDetails(dairyProduct)
+          );
           grid.appendChild(card);
         });
       });
 
-      function showFruitDetails(fruit) {
-        const modal = document.getElementById("fruitDetailModal");
-        const details = document.getElementById("fruitDetails");
+      function showDairyProductDetails(dairyProduct) {
+        const modal = document.getElementById("dairyDetailModal"); // Ensure you have this modal in your HTML
+        const details = document.getElementById("dairyDetails"); // And a container for the details
 
-        // Populate the modal with fruit details
+        // Populate the modal with dairy product details
         details.innerHTML = `
-        <h2 class="text-xl font-bold">${fruit.name}</h2>
-        <p>${fruit.desc}</p>
-        <p>Rating: ⭐ ${fruit.rating}</p>
-        <img src="${fruit.image}" alt="${fruit.name}" class="w-full mt-2">
+        <h2 class="text-xl font-bold">${dairyProduct.name}</h2>
+        <p>${dairyProduct.desc}</p>
+        <p>Rating: ⭐ ${dairyProduct.rating}</p>
+        <img src="${dairyProduct.image}" alt="${dairyProduct.name}" class="w-full mt-2">
     `;
 
         // Show the modal
@@ -423,21 +428,20 @@
         likeBtn.replaceWith(likeBtn.cloneNode(true));
         addToCartBtn.replaceWith(addToCartBtn.cloneNode(true));
 
-        // Add event listeners for newly cloned buttons
         document.getElementById("likeBtn").addEventListener("click", () => {
-          console.log(`Liked ${fruit.name}`);
+          console.log(`Liked ${dairyProduct.name}`);
           // Implement the like functionality here
         });
         document
           .getElementById("addToCartBtn")
           .addEventListener("click", () => {
-            console.log(`Added ${fruit.name} to cart`);
+            console.log(`Added ${dairyProduct.name} to cart`);
             // Implement the add to cart functionality here
           });
 
         // Prevent the modal from closing when clicking inside
         document
-          .querySelector("#fruitDetailModal > div")
+          .querySelector("#dairyDetailModal > div")
           .addEventListener("click", (e) => e.stopPropagation());
 
         // Close modal functionality
