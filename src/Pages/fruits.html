@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=\, initial-scale=1.0" />
+
+    <!-- The below link to the external css file -->
+    <link rel="stylesheet" type="text/css" href="../../styles.css" />
+    <link href="../../output.css" rel="stylesheet" />
+
+    <!-- Importing Icon -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <!-- The below is the favicon -->
+    <link rel="icon" type="image/jpg" href="../Assets/favIcon.jpg" />
+
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- The below is the title -->
+    <title>TRADEX</title>
+  </head>
+  <body>
+    <header class="bg-primary-light fixed top-0 left-0 w-full z-50 shadow-md">
+      <nav class="w-[100%] md:w-[95%] mx-auto px-4 py-4 relative">
+        <div class="flex justify-between items-center">
+          <!-- Logo and Menu Icon for mobile -->
+          <div class="flex items-center gap-3">
+            <ion-icon
+              onclick="onToggleMenu(this)"
+              name="menu-outline"
+              class="cursor-pointer w-8 h-8 bg-primary-light p-[5px] rounded-sm md:hidden"
+            ></ion-icon>
+            <a href="../../home.html" class="flex items-center gap-1">
+              <div class="flex flex-col items-start">
+                <span class="text-black text-2xl font-bold"
+                  >TRADE<span class="text-white">X</span></span
+                >
+              </div>
+            </a>
+          </div>
+
+          <!-- Account section -->
+          <div class="flex items-center gap-4 justify-center relative">
+            <div class="relative">
+              <button
+                id="dropdownButton"
+                class="flex items-center justify-center gap-2 cursor-pointer border-none bg-none"
+              >
+                <ion-icon name="person" class="text-xl"></ion-icon>
+                <span class="text-base font-semibold hidden md:block"
+                  >Account</span
+                >
+              </button>
+              <div
+                id="dropdownMenu"
+                class="hidden absolute bg-white shadow-md md:mt-4 mt-[70px] w-[200px] rounded overflow-hidden z-50 right-[-50px] md:right-0 md:mr-0 p-2"
+              >
+                <a
+                  href="./profileUser.html"
+                  class="block px-4 py-2 text-gray-700 font-semibold text-base hover:bg-gray-100"
+                  >My Account</a
+                >
+                <a
+                  href="../../index.html"
+                  class="flex items-center gap-2 px-4 py-2 text-gray-700 font-semibold text-base hover:bg-gray-100"
+                  ><ion-icon name="log-out-outline"></ion-icon>Log Out</a
+                >
+              </div>
+            </div>
+            <div
+              class="hidden md:flex items-center justify-center gap-2 cursor-pointer"
+            >
+              <ion-icon
+                name="help-circle-outline"
+                class="text-2xl font-extrabold"
+              ></ion-icon>
+              <span class="font-semibold">Help</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="md:absolute md:mt-0 mt-2 top-[12px] md:w-[80%] w-full">
+          <div
+            class="flex items-center bg-white rounded-md shadow-md shadow-black-400 md:w-[60%] mx-auto"
+          >
+            <ion-icon name="search-outline" class="w-8"></ion-icon>
+            <input
+              type="text"
+              placeholder="What are you looking for ?"
+              class="w-full focus:outline-none placeholder:text-primary-light placeholder:text-[16px] font-semibold text-sm"
+            />
+            <button
+              class="bg-primary-dark text-white px-4 py-2 rounded-r-md text-[14px] font-semibold"
+            >
+              Search
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile Menu (hidden by default, will show when menu icon is clicked) -->
+        <div
+          class="nav-links hidden absolute bg-primary-light w-full h-[60vh] left-0 top-full p-4 flex-col gap-4 font-bold z-50 transition-all duration-300 md:hidden"
+        >
+          <ul
+            class="flex flex-col text-base items-start p-5 gap-5 font-medium uppercase"
+          >
+            <a
+              href=""
+              class="flex items-center justify-center gap-2 text-white font-bold"
+            >
+              <ion-icon name="home"></ion-icon>
+              <span>Home</span>
+            </a>
+            <a
+              href="./about.html"
+              class="flex items-center justify-center gap-2 text-black font-bold hover:text-white transition-all duration-300"
+            >
+              <ion-icon name="ellipsis-vertical"></ion-icon>
+              <span>About Us</span>
+            </a>
+            <a
+              href=""
+              class="list-items flex items-center justify-center gap-2 text-black font-bold hover:text-white transition-all duration-300"
+            >
+              <ion-icon name="apps"></ion-icon>
+              <span>Produce Catalog</span>
+            </a>
+            <a
+              href=""
+              class="flex items-center justify-center gap-2 text-black font-bold hover:text-white transition-all duration-300"
+            >
+              <ion-icon name="call-outline"></ion-icon>
+              <span>Contact Us</span>
+            </a>
+            <a
+              href=""
+              class="flex items-center justify-center gap-2 text-black font-bold hover:text-white transition-all duration-300"
+            >
+              <ion-icon name="clipboard-outline"></ion-icon>
+              <span>Blog</span>
+            </a>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="md:pt-[80px] pt-[130px] md:px-[30px] bg-[#ffe2c3]">
+        <div class="flex items-center justify-between px-5">
+            <a href="../../home.html" class="hidden md:block">
+                <ion-icon name="return-up-back-outline"></ion-icon>
+                <span class="text-primary-dark font-bold">Back to Home</span>
+            </a>
+            <div>
+                <h1 class="text-center text-3xl md:font-bold font-semibold font-title">Fruits</h1>
+        <hr class="w-20 mx-auto border-2 border-primary-dark mt-2 mb-5" />
+            </div>
+            <div class="flex items-center space-x-2">
+                
+                <select class="text-gray-900 text-sm rounded-lg bg-[#ffe2c3] focus:ring-none focus:border-none block w-full p-2.5 dark:text-black">
+                    <option selected> Sort by: </option>
+                    <option value="price-low-high">Price: Low to High</option>
+                    <option value="price-high-low">Price: High to Low</option>
+                    <option value="newest">Newest</option>
+                    <option value="oldest">Oldest</option>
+                </select>
+            </div>
+            
+            
+        </div>
+        
+      <div id="fruitGrid" class="grid grid-cols-2 md:grid-cols-6 gap-4 p-4">
+        <!-- Fruit cards will be inserted here dynamically -->
+      </div>
+
+      <!-- Modal for displaying fruit details -->
+      <div
+        id="fruitDetailModal"
+        class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full z-50"
+        onclick="event.stopPropagation();"
+      >
+        <div
+          class="relative top-20 mx-auto p-5 border w-96 md:w-[450px] shadow-lg rounded-md bg-white"
+          onclick="event.stopPropagation();"
+        >
+          <!-- Close button -->
+          <button
+            id="closeModalBtn"
+            class="absolute top-0 right-0 mt-4 mr-4 text-gray-700 hover:text-gray-900"
+          >
+            <svg
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+          <div id="fruitDetails" class="mt-3">
+            <!-- Fruit details will go here -->
+          </div>
+          <div class="flex justify-end space-x-2 p-2 md:mt-5">
+            <button
+              id="likeBtn"
+              class="flex items-center gap-1 py-2 px-4 text-black rounded hover:font-extrabold transition duration-300"
+            >
+              <ion-icon name="bookmark-outline"></ion-icon
+              ><span class="text-[15px] font-bold">Add to favorite</span>
+            </button>
+            <button
+              id="addToCartBtn"
+              class="flex items-center gap-1 py-2 px-4 bg-gray-200 text-primary-dark font-bold rounded hover:bg-gray-400 transition duration-300"
+            >
+              <ion-icon name="cart-outline"></ion-icon> Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer
+      class="bg-black text-white py-[40px] md:px-[100px] px-[30px] relative"
+    >
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-[30px]">
+        <div>
+          <h3 class="text-xl font-bold">Quick Links</h3>
+          <ul class="mt-[10px]">
+            <li>
+              <a
+                href="../../home.html"
+                class="hover:text-orange-500 transition-all duration-[0.3s]"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="./about.html"
+                class="hover:text-orange-500 transition-all duration-[0.3s]"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="../../home.html"
+                class="hover:text-orange-500 transition-all duration-[0.3s]"
+                >Products</a
+              >
+            </li>
+            <li>
+              <a
+                href=""
+                class="hover:text-orange-500 transition-all duration-[0.3s]"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold">Contact</h3>
+          <p class="mt-[10px]">+000 000 000 000</p>
+          <p>123, ABC Street, XYZ City, Country, Pincode</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold">Social Media</h3>
+          <div class="flex items-center gap-[10px] mt-[10px] mb-10">
+            <a
+              href="https://www.facebook.com"
+              class="text-2xl hover:text-orange-500"
+              ><ion-icon name="logo-facebook"></ion-icon
+            ></a>
+            <a
+              href="https://www.instagram.com"
+              class="text-2xl hover:text-orange-500"
+              ><ion-icon name="logo-instagram"></ion-icon
+            ></a>
+            <a
+              href="https://www.twitter.com"
+              class="text-2xl hover:text-orange-500"
+              ><ion-icon name="logo-twitter"></ion-icon
+            ></a>
+            <a
+              href="https://www.linkedin.com"
+              class="text-2xl hover:text-orange-500"
+              ><ion-icon name="logo-linkedin"></ion-icon
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="absolute bottom-0 md:right-20 pb-[20px] pr-[20px]">
+        <a
+          href="./admin-login.html"
+          class="bg-primary-light hover:bg-orange-600 text-white font-semibold text-[16px] py-1 px-2 rounded transition duration-300 ease-in-out"
+        >
+          Admin Login
+        </a>
+      </div>
+    </footer>
+
+    <script>
+      // For the Fruits page
+      const fruits = [
+        {
+          id: 1,
+          name: "Apple",
+          desc: "Rich in vitamins",
+          rating: 4,
+          image: "https://source.unsplash.com/1600x900/?apple",
+        },
+        {
+          id: 2,
+          name: "Banana",
+          desc: "High in potassium",
+          rating: 5,
+          image: "https://source.unsplash.com/1600x900/?banana",
+        },
+        {
+          id: 3,
+          name: "Orange",
+          desc: "Rich in Vitamin C",
+          rating: 4,
+          image: "https://source.unsplash.com/1600x900/?orange",
+        },
+        {
+          id: 4,
+          name: "Grapes",
+          desc: "Rich in antioxidants",
+          rating: 5,
+          image: "https://source.unsplash.com/1600x900/?grapes",
+        },
+        {
+          id: 5,
+          name: "Pineapple",
+          desc: "Rich in Vitamin C",
+          rating: 4,
+          image: "https://source.unsplash.com/1600x900/?pineapple",
+        },
+        {
+          id: 6,
+          name: "Strawberry",
+          desc: "Rich in antioxidants",
+          rating: 5,
+          image: "https://source.unsplash.com/1600x900/?strawberry",
+        },
+        {
+            id: 7,
+            name: "Mango",
+            desc: "Rich in Vitamin A",
+            rating: 4,
+            image: "https://source.unsplash.com/1600x900/?mango",
+            },
+            {
+            id: 8,
+            name: "Watermelon",
+            desc: "Rich in water content",
+            rating: 5,
+            image: "https://source.unsplash.com/1600x900/?watermelon",
+            },
+      ];
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const grid = document.getElementById("fruitGrid");
+
+        fruits.forEach((fruit) => {
+          const card = document.createElement("div");
+          card.className =
+            "bg-white shadow rounded overflow-hidden flex flex-col";
+          card.innerHTML = `
+          <img src="${fruit.image}" alt="${fruit.name}" class="w-full h-25 md:h-40 object-cover">
+          <div class="p-4">
+              <h3 class="text-lg font-semibold">${fruit.name}</h3>
+              <p class="text-sm">${fruit.desc}</p>
+              <div class="flex items-center justify-between gap-4 mt-2">
+                  <span class="flex items-center gap-1">⭐ ${fruit.rating}</span>
+                  <button class="like-btn flex items-center justify-center gap-1"><span class="hidden md:block text-[10px] font-bold">Add to favorite</span><ion-icon name="bookmark-outline"></ion-icon></button>
+              </div>
+          </div>
+      `;
+          card.addEventListener("click", () => showFruitDetails(fruit));
+          grid.appendChild(card);
+        });
+      });
+
+      function showFruitDetails(fruit) {
+        const modal = document.getElementById("fruitDetailModal");
+        const details = document.getElementById("fruitDetails");
+
+        // Populate the modal with fruit details
+        details.innerHTML = `
+        <h2 class="text-xl font-bold">${fruit.name}</h2>
+        <p>${fruit.desc}</p>
+        <p>Rating: ⭐ ${fruit.rating}</p>
+        <img src="${fruit.image}" alt="${fruit.name}" class="w-full mt-2">
+    `;
+
+        // Show the modal
+        modal.style.display = "block";
+
+        // Find buttons by ID
+        const likeBtn = document.getElementById("likeBtn");
+        const addToCartBtn = document.getElementById("addToCartBtn");
+
+        // Reset previous event listeners
+        likeBtn.replaceWith(likeBtn.cloneNode(true));
+        addToCartBtn.replaceWith(addToCartBtn.cloneNode(true));
+
+        // Add event listeners for newly cloned buttons
+        document.getElementById("likeBtn").addEventListener("click", () => {
+          console.log(`Liked ${fruit.name}`);
+          // Implement the like functionality here
+        });
+        document
+          .getElementById("addToCartBtn")
+          .addEventListener("click", () => {
+            console.log(`Added ${fruit.name} to cart`);
+            // Implement the add to cart functionality here
+          });
+
+        // Prevent the modal from closing when clicking inside
+        document
+          .querySelector("#fruitDetailModal > div")
+          .addEventListener("click", (e) => e.stopPropagation());
+
+        // Close modal functionality
+        const closeModalBtn = document.getElementById("closeModalBtn");
+        closeModalBtn.addEventListener("click", () => {
+          modal.style.display = "none";
+        });
+
+        // Close the modal when clicking outside
+        modal.addEventListener("click", () => {
+          modal.style.display = "none";
+        });
+      }
+    </script>
+    <script src="../scripts/index.js"></script>
+  </body>
+</html>
