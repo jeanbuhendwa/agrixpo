@@ -45,12 +45,12 @@ const categories = [
   {
     name: "Fruits",
     image: "https://source.unsplash.com/featured/?fruits",
-    link: "./src/pages/fruits.html",
+    link: "../../src/pages/fruits.html",
   },
   {
     name: "Dairy",
     image: "https://source.unsplash.com/featured/?milk",
-    link: "./src/pages/dairy.html",
+    link: "../../src/pages/dairy.html",
   },
   {
     name: "Vegetables",
